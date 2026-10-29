@@ -1,0 +1,60 @@
+{
+  "upstream_geo_to_direction": {
+    "total_effect_delta_total": {
+      "observed_mean": -7.594239091873169,
+      "observed_median": -5.650139331817627,
+      "bootstrap_mean_ci95": [
+        -9.289779506226381,
+        -5.9771382927894585
+      ],
+      "p_value_one_sided": 0.0,
+      "side": "less",
+      "n_clusters": 90,
+      "n_observations": 180,
+      "B": 10000
+    },
+    "indirect_effect_through_heads": {
+      "observed_mean": -4.806250560283661,
+      "observed_median": -3.0764743089675903,
+      "bootstrap_mean_ci95": [
+        -6.09782319645087,
+        -3.586667260924977
+      ],
+      "p_value_one_sided": 0.0,
+      "side": "less",
+      "n_clusters": 90,
+      "n_observations": 180,
+      "B": 10000
+    },
+    "mediated_fraction_median_ratio": 0.6042680852489548
+  },
+  "downstream_head_to_output": {
+    "total_effect_head_drop": {
+      "observed_mean": 0.7888888888888889,
+      "observed_median": 0.625,
+      "bootstrap_mean_ci95": [
+        0.6854166666666667,
+        0.9013888888888889
+      ],
+      "p_value_one_sided": 0.0,
+      "side": "greater",
+      "n_clusters": 90,
+      "n_observations": 180,
+      "B": 10000
+    },
+    "restore_amount_via_direction_feature": {
+      "observed_mean": 0.7703125,
+      "observed_median": 0.5,
+      "bootstrap_mean_ci95": [
+        0.6079861111111111,
+        0.9513888888888888
+      ],
+      "p_value_one_sided": 0.0,
+      "side": "greater",
+      "n_clusters": 90,
+      "n_observations": 180,
+      "B": 10000
+    },
+    "mediated_fraction": 0.8
+  }
+}

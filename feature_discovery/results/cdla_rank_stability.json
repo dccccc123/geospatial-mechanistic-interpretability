@@ -1,0 +1,98 @@
+{
+  "East": {
+    "top1_feature": 47636,
+    "top2_feature": 18707,
+    "n_prompts": 45,
+    "n_bootstrap": 1000,
+    "seed": 42,
+    "p_rank_1": 0.684,
+    "p_rank_le2": 0.944,
+    "median_rank": 1.0,
+    "mean_rank": 1.372,
+    "p_overtaken_by_top2": 0.295,
+    "rank_distribution": [
+      684,
+      260,
+      56,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "West": {
+    "top1_feature": 56725,
+    "top2_feature": 38915,
+    "n_prompts": 45,
+    "n_bootstrap": 1000,
+    "seed": 42,
+    "p_rank_1": 1.0,
+    "p_rank_le2": 1.0,
+    "median_rank": 1.0,
+    "mean_rank": 1.0,
+    "p_overtaken_by_top2": 0.0,
+    "rank_distribution": [
+      1000,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "South": {
+    "top1_feature": 10801,
+    "top2_feature": 38915,
+    "n_prompts": 45,
+    "n_bootstrap": 1000,
+    "seed": 42,
+    "p_rank_1": 1.0,
+    "p_rank_le2": 1.0,
+    "median_rank": 1.0,
+    "mean_rank": 1.0,
+    "p_overtaken_by_top2": 0.0,
+    "rank_distribution": [
+      1000,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "North": {
+    "top1_feature": 26800,
+    "top2_feature": 18707,
+    "n_prompts": 45,
+    "n_bootstrap": 1000,
+    "seed": 42,
+    "p_rank_1": 1.0,
+    "p_rank_le2": 1.0,
+    "median_rank": 1.0,
+    "mean_rank": 1.0,
+    "p_overtaken_by_top2": 0.0,
+    "rank_distribution": [
+      1000,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

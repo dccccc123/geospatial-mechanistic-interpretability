@@ -1,0 +1,15 @@
+{
+  "model_name": "Qwen/Qwen3-8B",
+  "dataset_path": "data_process/dataset/balanced_city_pairs.jsonl",
+  "stages": [
+    "city_a",
+    "city_b",
+    "final"
+  ],
+  "clean_diff": 2.4609375,
+  "corrupt_diff": -2.359375,
+  "denominator": 4.8203125,
+  "n_layers": 36,
+  "n_heads": 32,
+  "num_pairs": 48
+}

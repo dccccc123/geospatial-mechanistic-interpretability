@@ -1,0 +1,1289 @@
+{
+  "experiment": "l26_east_joint_ablation",
+  "model_name": "Qwen/Qwen3-8B",
+  "target_layer": 26,
+  "east_features": [
+    47636,
+    18707
+  ],
+  "summary": {
+    "n_east_prompts": 28,
+    "east_features": [
+      47636,
+      18707
+    ],
+    "median_delta_east_47636_from_recon": -0.25,
+    "median_delta_east_18707_from_recon": -3.5625,
+    "median_delta_east_joint_from_recon": -4.125,
+    "mean_delta_east_47636_from_recon": -0.36607142857142855,
+    "mean_delta_east_18707_from_recon": -3.0245535714285716,
+    "mean_delta_east_joint_from_recon": -3.453125,
+    "flip_rate_47636": 0.42857142857142855,
+    "flip_rate_18707": 0.25,
+    "flip_rate_joint": 0.2857142857142857,
+    "n_joint_more_negative_than_47636": 25,
+    "n_joint_more_negative_than_18707": 20
+  },
+  "per_prompt": [
+    {
+      "index": 2,
+      "city_a": "Xining",
+      "city_b": "Harbin",
+      "ground_truth": "East",
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 22.375,
+        "West": 22.25,
+        "South": 26.375,
+        "North": 26.375
+      },
+      "recon_direction_logits": {
+        "East": 18.875,
+        "West": 11.8125,
+        "South": 11.125,
+        "North": 20.0
+      },
+      "single_47636_direction_logits": {
+        "East": 18.875,
+        "West": 11.8125,
+        "South": 11.125,
+        "North": 20.0
+      },
+      "single_18707_direction_logits": {
+        "East": 17.375,
+        "West": 9.0,
+        "South": 6.875,
+        "North": 15.0625
+      },
+      "joint_direction_logits": {
+        "East": 17.375,
+        "West": 9.0,
+        "South": 6.875,
+        "North": 15.0625
+      },
+      "east_logit_clean": 22.375,
+      "east_logit_recon": 18.875,
+      "delta_east_47636_from_recon": 0.0,
+      "delta_east_18707_from_recon": -1.5,
+      "delta_east_joint_from_recon": -1.5,
+      "flip_47636": true,
+      "flip_18707": false,
+      "flip_joint": false
+    },
+    {
+      "index": 3,
+      "city_a": "Xining",
+      "city_b": "Shanghai",
+      "ground_truth": "East",
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 27.625,
+        "West": 21.125,
+        "South": 28.0,
+        "North": 21.625
+      },
+      "recon_direction_logits": {
+        "East": 27.625,
+        "West": 12.0,
+        "South": 14.75,
+        "North": 13.125
+      },
+      "single_47636_direction_logits": {
+        "East": 26.75,
+        "West": 13.4375,
+        "South": 15.6875,
+        "North": 13.75
+      },
+      "single_18707_direction_logits": {
+        "East": 25.375,
+        "West": 8.625,
+        "South": 10.4375,
+        "North": 8.75
+      },
+      "joint_direction_logits": {
+        "East": 24.5,
+        "West": 9.9375,
+        "South": 11.3125,
+        "North": 9.5625
+      },
+      "east_logit_clean": 27.625,
+      "east_logit_recon": 27.625,
+      "delta_east_47636_from_recon": -0.875,
+      "delta_east_18707_from_recon": -2.25,
+      "delta_east_joint_from_recon": -3.125,
+      "flip_47636": false,
+      "flip_18707": false,
+      "flip_joint": false
+    },
+    {
+      "index": 5,
+      "city_a": "Artux",
+      "city_b": "Harbin",
+      "ground_truth": "East",
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 23.625,
+        "West": 23.25,
+        "South": 24.75,
+        "North": 25.0
+      },
+      "recon_direction_logits": {
+        "East": 21.375,
+        "West": 18.875,
+        "South": 21.0,
+        "North": 21.25
+      },
+      "single_47636_direction_logits": {
+        "East": 21.375,
+        "West": 19.0,
+        "South": 21.125,
+        "North": 21.5
+      },
+      "single_18707_direction_logits": {
+        "East": 15.25,
+        "West": 10.0,
+        "South": 12.0625,
+        "North": 12.0625
+      },
+      "joint_direction_logits": {
+        "East": 15.1875,
+        "West": 9.9375,
+        "South": 12.0625,
+        "North": 12.0625
+      },
+      "east_logit_clean": 23.625,
+      "east_logit_recon": 21.375,
+      "delta_east_47636_from_recon": 0.0,
+      "delta_east_18707_from_recon": -6.125,
+      "delta_east_joint_from_recon": -6.1875,
+      "flip_47636": false,
+      "flip_18707": false,
+      "flip_joint": false
+    },
+    {
+      "index": 7,
+      "city_a": "Xining",
+      "city_b": "Sanming",
+      "ground_truth": "East",
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 27.125,
+        "West": 23.625,
+        "South": 27.25,
+        "North": 24.0
+      },
+      "recon_direction_logits": {
+        "East": 22.25,
+        "West": 18.25,
+        "South": 18.875,
+        "North": 15.3125
+      },
+      "single_47636_direction_logits": {
+        "East": 21.625,
+        "West": 18.625,
+        "South": 18.75,
+        "North": 15.375
+      },
+      "single_18707_direction_logits": {
+        "East": 19.5,
+        "West": 15.1875,
+        "South": 14.75,
+        "North": 11.5625
+      },
+      "joint_direction_logits": {
+        "East": 19.0,
+        "West": 15.4375,
+        "South": 14.8125,
+        "North": 11.625
+      },
+      "east_logit_clean": 27.125,
+      "east_logit_recon": 22.25,
+      "delta_east_47636_from_recon": -0.625,
+      "delta_east_18707_from_recon": -2.75,
+      "delta_east_joint_from_recon": -3.25,
+      "flip_47636": true,
+      "flip_18707": false,
+      "flip_joint": false
+    },
+    {
+      "index": 9,
+      "city_a": "Turpan",
+      "city_b": "Shenzhen",
+      "ground_truth": "East",
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 28.75,
+        "West": 23.5,
+        "South": 25.75,
+        "North": 26.875
+      },
+      "recon_direction_logits": {
+        "East": 23.5,
+        "West": 15.375,
+        "South": 9.5,
+        "North": 16.875
+      },
+      "single_47636_direction_logits": {
+        "East": 23.0,
+        "West": 16.25,
+        "South": 9.625,
+        "North": 17.25
+      },
+      "single_18707_direction_logits": {
+        "East": 23.5,
+        "West": 13.3125,
+        "South": 5.78125,
+        "North": 13.8125
+      },
+      "joint_direction_logits": {
+        "East": 22.75,
+        "West": 14.125,
+        "South": 5.90625,
+        "North": 14.0625
+      },
+      "east_logit_clean": 28.75,
+      "east_logit_recon": 23.5,
+      "delta_east_47636_from_recon": -0.5,
+      "delta_east_18707_from_recon": 0.0,
+      "delta_east_joint_from_recon": -0.75,
+      "flip_47636": true,
+      "flip_18707": false,
+      "flip_joint": false
+    },
+    {
+      "index": 10,
+      "city_a": "Artux",
+      "city_b": "Langfang",
+      "ground_truth": "East",
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 23.625,
+        "West": 23.0,
+        "South": 24.125,
+        "North": 24.125
+      },
+      "recon_direction_logits": {
+        "East": 22.25,
+        "West": 19.875,
+        "South": 22.5,
+        "North": 21.25
+      },
+      "single_47636_direction_logits": {
+        "East": 21.875,
+        "West": 19.75,
+        "South": 22.5,
+        "North": 21.25
+      },
+      "single_18707_direction_logits": {
+        "East": 16.25,
+        "West": 13.5625,
+        "South": 15.6875,
+        "North": 13.25
+      },
+      "joint_direction_logits": {
+        "East": 16.0,
+        "West": 13.5,
+        "South": 15.6875,
+        "North": 13.125
+      },
+      "east_logit_clean": 23.625,
+      "east_logit_recon": 22.25,
+      "delta_east_47636_from_recon": -0.375,
+      "delta_east_18707_from_recon": -6.0,
+      "delta_east_joint_from_recon": -6.25,
+      "flip_47636": false,
+      "flip_18707": false,
+      "flip_joint": true
+    },
+    {
+      "index": 14,
+      "city_a": "Artux",
+      "city_b": "Dezhou",
+      "ground_truth": "East",
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 23.125,
+        "West": 22.5,
+        "South": 23.875,
+        "North": 24.125
+      },
+      "recon_direction_logits": {
+        "East": 20.625,
+        "West": 19.375,
+        "South": 22.375,
+        "North": 21.875
+      },
+      "single_47636_direction_logits": {
+        "East": 20.625,
+        "West": 19.5,
+        "South": 22.5,
+        "North": 22.0
+      },
+      "single_18707_direction_logits": {
+        "East": 12.375,
+        "West": 11.6875,
+        "South": 16.0,
+        "North": 14.875
+      },
+      "joint_direction_logits": {
+        "East": 12.375,
+        "West": 11.75,
+        "South": 16.0,
+        "North": 14.9375
+      },
+      "east_logit_clean": 23.125,
+      "east_logit_recon": 20.625,
+      "delta_east_47636_from_recon": 0.0,
+      "delta_east_18707_from_recon": -8.25,
+      "delta_east_joint_from_recon": -8.25,
+      "flip_47636": false,
+      "flip_18707": true,
+      "flip_joint": true
+    },
+    {
+      "index": 16,
+      "city_a": "Xining",
+      "city_b": "Tai’an",
+      "ground_truth": "East",
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 27.0,
+        "West": 25.375,
+        "South": 27.5,
+        "North": 26.125
+      },
+      "recon_direction_logits": {
+        "East": 25.25,
+        "West": 21.375,
+        "South": 23.625,
+        "North": 22.375
+      },
+      "single_47636_direction_logits": {
+        "East": 24.75,
+        "West": 21.875,
+        "South": 23.875,
+        "North": 22.625
+      },
+      "single_18707_direction_logits": {
+        "East": 21.625,
+        "West": 17.5,
+        "South": 17.25,
+        "North": 15.3125
+      },
+      "joint_direction_logits": {
+        "East": 21.0,
+        "West": 17.75,
+        "South": 17.375,
+        "North": 15.4375
+      },
+      "east_logit_clean": 27.0,
+      "east_logit_recon": 25.25,
+      "delta_east_47636_from_recon": -0.5,
+      "delta_east_18707_from_recon": -3.625,
+      "delta_east_joint_from_recon": -4.25,
+      "flip_47636": false,
+      "flip_18707": false,
+      "flip_joint": false
+    },
+    {
+      "index": 24,
+      "city_a": "Xining",
+      "city_b": "Xianning",
+      "ground_truth": "East",
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 26.0,
+        "West": 25.0,
+        "South": 26.625,
+        "North": 25.625
+      },
+      "recon_direction_logits": {
+        "East": 23.5,
+        "West": 23.75,
+        "South": 24.375,
+        "North": 21.625
+      },
+      "single_47636_direction_logits": {
+        "East": 23.25,
+        "West": 23.75,
+        "South": 24.375,
+        "North": 21.625
+      },
+      "single_18707_direction_logits": {
+        "East": 19.75,
+        "West": 19.25,
+        "South": 18.25,
+        "North": 14.6875
+      },
+      "joint_direction_logits": {
+        "East": 19.5,
+        "West": 19.25,
+        "South": 18.25,
+        "North": 14.6875
+      },
+      "east_logit_clean": 26.0,
+      "east_logit_recon": 23.5,
+      "delta_east_47636_from_recon": -0.25,
+      "delta_east_18707_from_recon": -3.75,
+      "delta_east_joint_from_recon": -4.0,
+      "flip_47636": true,
+      "flip_18707": true,
+      "flip_joint": true
+    },
+    {
+      "index": 25,
+      "city_a": "Baise",
+      "city_b": "Anqing",
+      "ground_truth": "East",
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 23.5,
+        "West": 23.25,
+        "South": 24.75,
+        "North": 24.75
+      },
+      "recon_direction_logits": {
+        "East": 20.75,
+        "West": 20.375,
+        "South": 23.125,
+        "North": 20.0
+      },
+      "single_47636_direction_logits": {
+        "East": 20.75,
+        "West": 20.375,
+        "South": 23.125,
+        "North": 20.0
+      },
+      "single_18707_direction_logits": {
+        "East": 14.9375,
+        "West": 14.8125,
+        "South": 15.875,
+        "North": 12.625
+      },
+      "joint_direction_logits": {
+        "East": 14.9375,
+        "West": 14.8125,
+        "South": 15.875,
+        "North": 12.625
+      },
+      "east_logit_clean": 23.5,
+      "east_logit_recon": 20.75,
+      "delta_east_47636_from_recon": 0.0,
+      "delta_east_18707_from_recon": -5.8125,
+      "delta_east_joint_from_recon": -5.8125,
+      "flip_47636": true,
+      "flip_18707": true,
+      "flip_joint": true
+    },
+    {
+      "index": 27,
+      "city_a": "Ya'an",
+      "city_b": "Xianning",
+      "ground_truth": "East",
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 28.25,
+        "West": 27.375,
+        "South": 29.375,
+        "North": 28.625
+      },
+      "recon_direction_logits": {
+        "East": 24.625,
+        "West": 23.625,
+        "South": 25.0,
+        "North": 24.25
+      },
+      "single_47636_direction_logits": {
+        "East": 24.375,
+        "West": 23.75,
+        "South": 25.0,
+        "North": 24.5
+      },
+      "single_18707_direction_logits": {
+        "East": 20.625,
+        "West": 17.75,
+        "South": 17.75,
+        "North": 15.875
+      },
+      "joint_direction_logits": {
+        "East": 20.25,
+        "West": 17.875,
+        "South": 17.875,
+        "North": 16.125
+      },
+      "east_logit_clean": 28.25,
+      "east_logit_recon": 24.625,
+      "delta_east_47636_from_recon": -0.25,
+      "delta_east_18707_from_recon": -4.0,
+      "delta_east_joint_from_recon": -4.375,
+      "flip_47636": false,
+      "flip_18707": false,
+      "flip_joint": false
+    },
+    {
+      "index": 33,
+      "city_a": "Wuhan",
+      "city_b": "Lu’an",
+      "ground_truth": "East",
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 25.0,
+        "West": 23.875,
+        "South": 25.5,
+        "North": 25.875
+      },
+      "recon_direction_logits": {
+        "East": 23.0,
+        "West": 21.625,
+        "South": 21.25,
+        "North": 23.125
+      },
+      "single_47636_direction_logits": {
+        "East": 23.0,
+        "West": 21.625,
+        "South": 21.25,
+        "North": 23.125
+      },
+      "single_18707_direction_logits": {
+        "East": 18.25,
+        "West": 16.5,
+        "South": 14.625,
+        "North": 14.8125
+      },
+      "joint_direction_logits": {
+        "East": 18.25,
+        "West": 16.5,
+        "South": 14.625,
+        "North": 14.8125
+      },
+      "east_logit_clean": 25.0,
+      "east_logit_recon": 23.0,
+      "delta_east_47636_from_recon": 0.0,
+      "delta_east_18707_from_recon": -4.75,
+      "delta_east_joint_from_recon": -4.75,
+      "flip_47636": true,
+      "flip_18707": false,
+      "flip_joint": false
+    },
+    {
+      "index": 37,
+      "city_a": "Wuhan",
+      "city_b": "Enshi",
+      "ground_truth": "West",
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 24.625,
+        "West": 23.75,
+        "South": 24.375,
+        "North": 25.25
+      },
+      "recon_direction_logits": {
+        "East": 19.0,
+        "West": 15.375,
+        "South": 12.9375,
+        "North": 15.6875
+      },
+      "single_47636_direction_logits": {
+        "East": 18.5,
+        "West": 15.75,
+        "South": 13.0,
+        "North": 15.6875
+      },
+      "single_18707_direction_logits": {
+        "East": 18.5,
+        "West": 13.0,
+        "South": 8.4375,
+        "North": 10.125
+      },
+      "joint_direction_logits": {
+        "East": 17.875,
+        "West": 13.125,
+        "South": 8.4375,
+        "North": 10.125
+      },
+      "east_logit_clean": 24.625,
+      "east_logit_recon": 19.0,
+      "delta_east_47636_from_recon": -0.5,
+      "delta_east_18707_from_recon": -0.5,
+      "delta_east_joint_from_recon": -1.125,
+      "flip_47636": false,
+      "flip_18707": false,
+      "flip_joint": false
+    },
+    {
+      "index": 53,
+      "city_a": "Wanning",
+      "city_b": "Hangzhou",
+      "ground_truth": "North",
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 23.75,
+        "West": 22.0,
+        "South": 24.75,
+        "North": 24.25
+      },
+      "recon_direction_logits": {
+        "East": 18.125,
+        "West": 10.625,
+        "South": 8.1875,
+        "North": 11.0
+      },
+      "single_47636_direction_logits": {
+        "East": 18.125,
+        "West": 10.625,
+        "South": 8.1875,
+        "North": 11.0
+      },
+      "single_18707_direction_logits": {
+        "East": 16.75,
+        "West": 10.625,
+        "South": 7.0625,
+        "North": 9.5625
+      },
+      "joint_direction_logits": {
+        "East": 16.75,
+        "West": 10.625,
+        "South": 7.0625,
+        "North": 9.5625
+      },
+      "east_logit_clean": 23.75,
+      "east_logit_recon": 18.125,
+      "delta_east_47636_from_recon": 0.0,
+      "delta_east_18707_from_recon": -1.375,
+      "delta_east_joint_from_recon": -1.375,
+      "flip_47636": false,
+      "flip_18707": false,
+      "flip_joint": false
+    },
+    {
+      "index": 75,
+      "city_a": "Wuhan",
+      "city_b": "Tai’an",
+      "ground_truth": "North",
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 25.75,
+        "West": 25.0,
+        "South": 26.375,
+        "North": 27.125
+      },
+      "recon_direction_logits": {
+        "East": 24.25,
+        "West": 18.875,
+        "South": 19.25,
+        "North": 21.75
+      },
+      "single_47636_direction_logits": {
+        "East": 24.0,
+        "West": 19.0,
+        "South": 19.25,
+        "North": 21.875
+      },
+      "single_18707_direction_logits": {
+        "East": 20.125,
+        "West": 14.125,
+        "South": 13.75,
+        "North": 14.6875
+      },
+      "joint_direction_logits": {
+        "East": 20.0,
+        "West": 14.1875,
+        "South": 13.6875,
+        "North": 14.75
+      },
+      "east_logit_clean": 25.75,
+      "east_logit_recon": 24.25,
+      "delta_east_47636_from_recon": -0.25,
+      "delta_east_18707_from_recon": -4.125,
+      "delta_east_joint_from_recon": -4.25,
+      "flip_47636": false,
+      "flip_18707": false,
+      "flip_joint": false
+    },
+    {
+      "index": 87,
+      "city_a": "Wanning",
+      "city_b": "Yangjiang",
+      "ground_truth": "North",
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 24.75,
+        "West": 23.5,
+        "South": 25.75,
+        "North": 25.5
+      },
+      "recon_direction_logits": {
+        "East": 18.375,
+        "West": 19.75,
+        "South": 23.375,
+        "North": 21.75
+      },
+      "single_47636_direction_logits": {
+        "East": 18.125,
+        "West": 19.75,
+        "South": 23.25,
+        "North": 21.75
+      },
+      "single_18707_direction_logits": {
+        "East": 13.25,
+        "West": 14.9375,
+        "South": 15.5625,
+        "North": 15.3125
+      },
+      "joint_direction_logits": {
+        "East": 12.9375,
+        "West": 14.9375,
+        "South": 15.375,
+        "North": 15.25
+      },
+      "east_logit_clean": 24.75,
+      "east_logit_recon": 18.375,
+      "delta_east_47636_from_recon": -0.25,
+      "delta_east_18707_from_recon": -5.125,
+      "delta_east_joint_from_recon": -5.4375,
+      "flip_47636": true,
+      "flip_18707": true,
+      "flip_joint": true
+    },
+    {
+      "index": 89,
+      "city_a": "Anyang",
+      "city_b": "Bozhou",
+      "ground_truth": "South",
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 27.375,
+        "West": 26.125,
+        "South": 28.25,
+        "North": 28.125
+      },
+      "recon_direction_logits": {
+        "East": 22.125,
+        "West": 20.625,
+        "South": 25.75,
+        "North": 22.625
+      },
+      "single_47636_direction_logits": {
+        "East": 22.125,
+        "West": 20.625,
+        "South": 25.75,
+        "North": 22.625
+      },
+      "single_18707_direction_logits": {
+        "East": 13.375,
+        "West": 11.5,
+        "South": 13.75,
+        "North": 15.3125
+      },
+      "joint_direction_logits": {
+        "East": 13.375,
+        "West": 11.5,
+        "South": 13.75,
+        "North": 15.3125
+      },
+      "east_logit_clean": 27.375,
+      "east_logit_recon": 22.125,
+      "delta_east_47636_from_recon": 0.0,
+      "delta_east_18707_from_recon": -8.75,
+      "delta_east_joint_from_recon": -8.75,
+      "flip_47636": true,
+      "flip_18707": false,
+      "flip_joint": false
+    },
+    {
+      "index": 91,
+      "city_a": "Guiyang",
+      "city_b": "Shanghai",
+      "ground_truth": "East",
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 26.0,
+        "West": 21.125,
+        "South": 25.25,
+        "North": 24.75
+      },
+      "recon_direction_logits": {
+        "East": 28.625,
+        "West": 10.5625,
+        "South": 8.1875,
+        "North": 21.0
+      },
+      "single_47636_direction_logits": {
+        "East": 28.125,
+        "West": 12.1875,
+        "South": 8.875,
+        "North": 22.25
+      },
+      "single_18707_direction_logits": {
+        "East": 27.0,
+        "West": 7.0,
+        "South": 3.890625,
+        "North": 16.625
+      },
+      "joint_direction_logits": {
+        "East": 26.375,
+        "West": 8.375,
+        "South": 4.5625,
+        "North": 17.875
+      },
+      "east_logit_clean": 26.0,
+      "east_logit_recon": 28.625,
+      "delta_east_47636_from_recon": -0.5,
+      "delta_east_18707_from_recon": -1.625,
+      "delta_east_joint_from_recon": -2.25,
+      "flip_47636": false,
+      "flip_18707": false,
+      "flip_joint": false
+    },
+    {
+      "index": 96,
+      "city_a": "Baise",
+      "city_b": "Hangzhou",
+      "ground_truth": "East",
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 25.25,
+        "West": 23.625,
+        "South": 27.375,
+        "North": 26.375
+      },
+      "recon_direction_logits": {
+        "East": 23.875,
+        "West": 18.75,
+        "South": 15.5625,
+        "North": 17.75
+      },
+      "single_47636_direction_logits": {
+        "East": 23.875,
+        "West": 18.75,
+        "South": 15.5625,
+        "North": 17.75
+      },
+      "single_18707_direction_logits": {
+        "East": 20.25,
+        "West": 13.75,
+        "South": 9.0,
+        "North": 11.6875
+      },
+      "joint_direction_logits": {
+        "East": 20.25,
+        "West": 13.75,
+        "South": 9.0,
+        "North": 11.6875
+      },
+      "east_logit_clean": 25.25,
+      "east_logit_recon": 23.875,
+      "delta_east_47636_from_recon": 0.0,
+      "delta_east_18707_from_recon": -3.625,
+      "delta_east_joint_from_recon": -3.625,
+      "flip_47636": false,
+      "flip_18707": false,
+      "flip_joint": false
+    },
+    {
+      "index": 101,
+      "city_a": "Longnan",
+      "city_b": "Putian",
+      "ground_truth": "East",
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 23.5,
+        "West": 21.5,
+        "South": 24.0,
+        "North": 24.0
+      },
+      "recon_direction_logits": {
+        "East": 19.0,
+        "West": 18.125,
+        "South": 19.25,
+        "North": 18.0
+      },
+      "single_47636_direction_logits": {
+        "East": 18.75,
+        "West": 18.375,
+        "South": 19.375,
+        "North": 18.125
+      },
+      "single_18707_direction_logits": {
+        "East": 22.125,
+        "West": 21.375,
+        "South": 21.375,
+        "North": 17.875
+      },
+      "joint_direction_logits": {
+        "East": 21.75,
+        "West": 21.625,
+        "South": 21.5,
+        "North": 18.0
+      },
+      "east_logit_clean": 23.5,
+      "east_logit_recon": 19.0,
+      "delta_east_47636_from_recon": -0.25,
+      "delta_east_18707_from_recon": 3.125,
+      "delta_east_joint_from_recon": 2.75,
+      "flip_47636": true,
+      "flip_18707": true,
+      "flip_joint": true
+    },
+    {
+      "index": 111,
+      "city_a": "Hechi",
+      "city_b": "Shanghai",
+      "ground_truth": "East",
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 31.125,
+        "West": 21.25,
+        "South": 24.5,
+        "North": 28.0
+      },
+      "recon_direction_logits": {
+        "East": 21.0,
+        "West": 4.84375,
+        "South": 1.671875,
+        "North": 11.0
+      },
+      "single_47636_direction_logits": {
+        "East": 19.75,
+        "West": 6.03125,
+        "South": 2.234375,
+        "North": 11.5
+      },
+      "single_18707_direction_logits": {
+        "East": 18.0,
+        "West": 4.21875,
+        "South": 1.3203125,
+        "North": 9.0
+      },
+      "joint_direction_logits": {
+        "East": 16.625,
+        "West": 5.09375,
+        "South": 1.9296875,
+        "North": 9.375
+      },
+      "east_logit_clean": 31.125,
+      "east_logit_recon": 21.0,
+      "delta_east_47636_from_recon": -1.25,
+      "delta_east_18707_from_recon": -3.0,
+      "delta_east_joint_from_recon": -4.375,
+      "flip_47636": false,
+      "flip_18707": false,
+      "flip_joint": false
+    },
+    {
+      "index": 112,
+      "city_a": "Guiyang",
+      "city_b": "Sanming",
+      "ground_truth": "East",
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 27.125,
+        "West": 24.875,
+        "South": 26.5,
+        "North": 27.625
+      },
+      "recon_direction_logits": {
+        "East": 23.25,
+        "West": 18.125,
+        "South": 18.25,
+        "North": 19.25
+      },
+      "single_47636_direction_logits": {
+        "East": 22.625,
+        "West": 18.625,
+        "South": 18.5,
+        "North": 19.75
+      },
+      "single_18707_direction_logits": {
+        "East": 19.75,
+        "West": 14.0625,
+        "South": 14.375,
+        "North": 13.875
+      },
+      "joint_direction_logits": {
+        "East": 19.0,
+        "West": 14.25,
+        "South": 14.625,
+        "North": 14.125
+      },
+      "east_logit_clean": 27.125,
+      "east_logit_recon": 23.25,
+      "delta_east_47636_from_recon": -0.625,
+      "delta_east_18707_from_recon": -3.5,
+      "delta_east_joint_from_recon": -4.25,
+      "flip_47636": false,
+      "flip_18707": false,
+      "flip_joint": false
+    },
+    {
+      "index": 124,
+      "city_a": "Guiyang",
+      "city_b": "Shenzhen",
+      "ground_truth": "East",
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 27.25,
+        "West": 21.125,
+        "South": 27.875,
+        "North": 22.125
+      },
+      "recon_direction_logits": {
+        "East": 25.375,
+        "West": 14.0625,
+        "South": 13.8125,
+        "North": 13.1875
+      },
+      "single_47636_direction_logits": {
+        "East": 24.0,
+        "West": 15.8125,
+        "South": 14.1875,
+        "North": 13.375
+      },
+      "single_18707_direction_logits": {
+        "East": 24.0,
+        "West": 12.3125,
+        "South": 11.25,
+        "North": 10.4375
+      },
+      "joint_direction_logits": {
+        "East": 22.5,
+        "West": 13.8125,
+        "South": 11.5,
+        "North": 10.5
+      },
+      "east_logit_clean": 27.25,
+      "east_logit_recon": 25.375,
+      "delta_east_47636_from_recon": -1.375,
+      "delta_east_18707_from_recon": -1.375,
+      "delta_east_joint_from_recon": -2.875,
+      "flip_47636": false,
+      "flip_18707": false,
+      "flip_joint": false
+    },
+    {
+      "index": 125,
+      "city_a": "Handan",
+      "city_b": "Shanghai",
+      "ground_truth": "East",
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 27.75,
+        "West": 22.5,
+        "South": 29.625,
+        "North": 24.375
+      },
+      "recon_direction_logits": {
+        "East": 27.375,
+        "West": 13.75,
+        "South": 13.875,
+        "North": 13.625
+      },
+      "single_47636_direction_logits": {
+        "East": 26.75,
+        "West": 14.6875,
+        "South": 14.1875,
+        "North": 13.75
+      },
+      "single_18707_direction_logits": {
+        "East": 23.0,
+        "West": 9.75,
+        "South": 9.5625,
+        "North": 9.0
+      },
+      "joint_direction_logits": {
+        "East": 22.125,
+        "West": 10.375,
+        "South": 9.6875,
+        "North": 9.125
+      },
+      "east_logit_clean": 27.75,
+      "east_logit_recon": 27.375,
+      "delta_east_47636_from_recon": -0.625,
+      "delta_east_18707_from_recon": -4.375,
+      "delta_east_joint_from_recon": -5.25,
+      "flip_47636": false,
+      "flip_18707": false,
+      "flip_joint": false
+    },
+    {
+      "index": 141,
+      "city_a": "Longshan",
+      "city_b": "Shenzhen",
+      "ground_truth": "South",
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 25.625,
+        "West": 24.0,
+        "South": 26.625,
+        "North": 25.5
+      },
+      "recon_direction_logits": {
+        "East": 25.625,
+        "West": 22.875,
+        "South": 30.625,
+        "North": 25.5
+      },
+      "single_47636_direction_logits": {
+        "East": 25.375,
+        "West": 23.125,
+        "South": 30.625,
+        "North": 25.5
+      },
+      "single_18707_direction_logits": {
+        "East": 24.25,
+        "West": 20.125,
+        "South": 31.125,
+        "North": 23.5
+      },
+      "joint_direction_logits": {
+        "East": 24.125,
+        "West": 20.375,
+        "South": 31.25,
+        "North": 23.75
+      },
+      "east_logit_clean": 25.625,
+      "east_logit_recon": 25.625,
+      "delta_east_47636_from_recon": -0.25,
+      "delta_east_18707_from_recon": -1.375,
+      "delta_east_joint_from_recon": -1.5,
+      "flip_47636": true,
+      "flip_18707": true,
+      "flip_joint": true
+    },
+    {
+      "index": 157,
+      "city_a": "Jinan",
+      "city_b": "Putian",
+      "ground_truth": "South",
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 24.5,
+        "West": 21.5,
+        "South": 26.125,
+        "North": 24.0
+      },
+      "recon_direction_logits": {
+        "East": 20.75,
+        "West": 19.25,
+        "South": 19.875,
+        "North": 18.125
+      },
+      "single_47636_direction_logits": {
+        "East": 20.75,
+        "West": 19.25,
+        "South": 19.875,
+        "North": 18.125
+      },
+      "single_18707_direction_logits": {
+        "East": 23.375,
+        "West": 20.625,
+        "South": 19.625,
+        "North": 18.25
+      },
+      "joint_direction_logits": {
+        "East": 23.375,
+        "West": 20.625,
+        "South": 19.625,
+        "North": 18.25
+      },
+      "east_logit_clean": 24.5,
+      "east_logit_recon": 20.75,
+      "delta_east_47636_from_recon": 0.0,
+      "delta_east_18707_from_recon": 2.625,
+      "delta_east_joint_from_recon": 2.625,
+      "flip_47636": true,
+      "flip_18707": false,
+      "flip_joint": false
+    },
+    {
+      "index": 160,
+      "city_a": "Hechi",
+      "city_b": "Hebi",
+      "ground_truth": "North",
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 26.375,
+        "West": 25.375,
+        "South": 25.75,
+        "North": 26.75
+      },
+      "recon_direction_logits": {
+        "East": 25.375,
+        "West": 22.5,
+        "South": 22.5,
+        "North": 23.0
+      },
+      "single_47636_direction_logits": {
+        "East": 24.875,
+        "West": 22.75,
+        "South": 22.625,
+        "North": 23.25
+      },
+      "single_18707_direction_logits": {
+        "East": 17.875,
+        "West": 15.75,
+        "South": 13.6875,
+        "North": 14.875
+      },
+      "joint_direction_logits": {
+        "East": 17.125,
+        "West": 15.5625,
+        "South": 13.4375,
+        "North": 14.75
+      },
+      "east_logit_clean": 26.375,
+      "east_logit_recon": 25.375,
+      "delta_east_47636_from_recon": -0.5,
+      "delta_east_18707_from_recon": -7.5,
+      "delta_east_joint_from_recon": -8.25,
+      "flip_47636": false,
+      "flip_18707": false,
+      "flip_joint": false
+    },
+    {
+      "index": 161,
+      "city_a": "Longnan",
+      "city_b": "Maoming",
+      "ground_truth": "South",
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 24.375,
+        "West": 21.75,
+        "South": 25.25,
+        "North": 23.75
+      },
+      "recon_direction_logits": {
+        "East": 19.875,
+        "West": 19.25,
+        "South": 20.875,
+        "North": 17.875
+      },
+      "single_47636_direction_logits": {
+        "East": 19.375,
+        "West": 19.5,
+        "South": 20.875,
+        "North": 17.875
+      },
+      "single_18707_direction_logits": {
+        "East": 24.5,
+        "West": 22.625,
+        "South": 23.25,
+        "North": 17.625
+      },
+      "joint_direction_logits": {
+        "East": 23.625,
+        "West": 22.75,
+        "South": 23.125,
+        "North": 17.5
+      },
+      "east_logit_clean": 24.375,
+      "east_logit_recon": 19.875,
+      "delta_east_47636_from_recon": -0.5,
+      "delta_east_18707_from_recon": 4.625,
+      "delta_east_joint_from_recon": 3.75,
+      "flip_47636": true,
+      "flip_18707": true,
+      "flip_joint": true
+    }
+  ]
+}

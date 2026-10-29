@@ -1,0 +1,86 @@
+{
+  "axis_offset_delta": 1.5347222222222223,
+  "per_direction_mean_logit": {
+    "East": 24.060416666666665,
+    "West": 24.227083333333333,
+    "South": 25.87847222222222,
+    "North": 25.478472222222223
+  },
+  "flat_argmax": {
+    "accuracy": 0.45555555555555555,
+    "per_direction_accuracy": {
+      "East": 0.06666666666666667,
+      "West": 0.08888888888888889,
+      "South": 0.8222222222222222,
+      "North": 0.8444444444444444
+    },
+    "confusion_matrix": {
+      "East": {
+        "East": 3,
+        "West": 0,
+        "South": 26,
+        "North": 16
+      },
+      "West": {
+        "East": 0,
+        "West": 4,
+        "South": 16,
+        "North": 25
+      },
+      "South": {
+        "East": 0,
+        "West": 0,
+        "South": 37,
+        "North": 8
+      },
+      "North": {
+        "East": 0,
+        "West": 2,
+        "South": 5,
+        "North": 38
+      }
+    },
+    "axis_agreement": 0.5277777777777778
+  },
+  "axis_rule": {
+    "accuracy": 0.5666666666666667,
+    "per_direction_accuracy": {
+      "East": 0.4222222222222222,
+      "West": 0.4222222222222222,
+      "South": 0.7333333333333333,
+      "North": 0.6888888888888889
+    },
+    "confusion_matrix": {
+      "East": {
+        "East": 19,
+        "West": 2,
+        "South": 12,
+        "North": 12
+      },
+      "West": {
+        "East": 1,
+        "West": 19,
+        "South": 9,
+        "North": 16
+      },
+      "South": {
+        "East": 4,
+        "West": 2,
+        "South": 33,
+        "North": 6
+      },
+      "North": {
+        "East": 4,
+        "West": 7,
+        "South": 3,
+        "North": 31
+      }
+    },
+    "axis_agreement": 0.6333333333333333
+  },
+  "flat_cross_axis_errors": {
+    "ew_to_ns": 83,
+    "ns_to_ew": 2,
+    "total": 85
+  }
+}

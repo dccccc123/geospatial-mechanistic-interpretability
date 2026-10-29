@@ -1,0 +1,74 @@
+{
+  "model_name": "Qwen/Qwen3-8B",
+  "dataset_path": "data_process/dataset/balanced_city_pairs.jsonl",
+  "total_pairs": 48,
+  "sender_layer": 8,
+  "receiver_layer": 26,
+  "receiver_head": 24,
+  "clean_diff": 2.4505208333333335,
+  "corrupt_diff": -2.3515625,
+  "denominator": 4.802083333333334,
+  "stages": [
+    "city_a",
+    "city_b",
+    "final"
+  ],
+  "experiments": {
+    "exp1_patch_sender": {
+      "city_a": {
+        "mean_diff": 2.450521,
+        "metric": 1.0
+      },
+      "city_b": {
+        "mean_diff": 0.46875,
+        "metric": 0.58731
+      },
+      "final": {
+        "mean_diff": 2.591146,
+        "metric": 1.029284
+      }
+    },
+    "exp2_patch_receiver": {
+      "city_a": {
+        "mean_diff": 2.450521,
+        "metric": 1.0
+      },
+      "city_b": {
+        "mean_diff": 2.432292,
+        "metric": 0.996204
+      },
+      "final": {
+        "mean_diff": -1.481771,
+        "metric": 0.181128
+      }
+    },
+    "exp3_path_mlp_to_head": {
+      "city_a": {
+        "mean_diff": 2.450521,
+        "metric": 1.0
+      },
+      "city_b": {
+        "mean_diff": 2.440104,
+        "metric": 0.997831
+      },
+      "final": {
+        "mean_diff": -1.505208,
+        "metric": 0.176247
+      }
+    },
+    "exp4_path_mlp_to_resid": {
+      "city_a": {
+        "mean_diff": 2.450521,
+        "metric": 1.0
+      },
+      "city_b": {
+        "mean_diff": 1.130208,
+        "metric": 0.725054
+      },
+      "final": {
+        "mean_diff": -0.424479,
+        "metric": 0.401302
+      }
+    }
+  }
+}

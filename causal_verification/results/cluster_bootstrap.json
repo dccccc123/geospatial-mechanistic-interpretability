@@ -1,0 +1,85 @@
+{
+  "reversal_consistency": {
+    "n_pairs": 90,
+    "n_consistent": 54,
+    "consistency_rate": 0.6,
+    "per_direction": {
+      "East": 0.38461538461538464,
+      "West": 0.7368421052631579,
+      "South": 0.6,
+      "North": 0.72
+    }
+  },
+  "l26_direction_feature": {
+    "main_effect_target": {
+      "observed_mean": -0.7380208333333333,
+      "observed_median": -0.5,
+      "bootstrap_mean_ci95": [
+        -0.8701432291666666,
+        -0.6149218750000001
+      ],
+      "p_value_one_sided_less": 0.0,
+      "n_clusters": 90,
+      "n_observations": 180,
+      "B": 10000
+    },
+    "diff_effect_target_minus_control": {
+      "observed_mean": -0.7401041666666667,
+      "observed_median": -0.5,
+      "bootstrap_mean_ci95": [
+        -0.8720529513888888,
+        -0.6171831597222223
+      ],
+      "p_value_one_sided_less": 0.0,
+      "n_clusters": 90,
+      "n_observations": 180,
+      "B": 10000
+    },
+    "old_wilcoxon_p": 4.8623388999852156e-27
+  },
+  "l8_geographic_feature": {
+    "main_effect_geo": {
+      "observed_mean": -1.1319444444444444,
+      "observed_median": -1.25,
+      "bootstrap_mean_ci95": [
+        -1.5006944444444446,
+        -0.7548437500000003
+      ],
+      "p_value_one_sided_less": 0.0,
+      "n_clusters": 90,
+      "n_observations": 180,
+      "B": 10000
+    },
+    "old_wilcoxon_p": 1.311932437502088e-13
+  },
+  "head_24": {
+    "main_effect_delta_logit": {
+      "observed_mean": -0.5180555555555556,
+      "observed_median": -0.25,
+      "bootstrap_mean_ci95": [
+        -0.6805729166666666,
+        -0.375
+      ],
+      "p_value_one_sided_less": 0.0,
+      "n_clusters": 90,
+      "n_observations": 180,
+      "B": 10000
+    },
+    "old_wilcoxon_p": 1.736048757977094e-10
+  },
+  "head_25": {
+    "main_effect_delta_logit": {
+      "observed_mean": -0.41458333333333336,
+      "observed_median": -0.3125,
+      "bootstrap_mean_ci95": [
+        -0.51875,
+        -0.3145833333333333
+      ],
+      "p_value_one_sided_less": 0.0,
+      "n_clusters": 90,
+      "n_observations": 180,
+      "B": 10000
+    },
+    "old_wilcoxon_p": 2.9614995459778557e-13
+  }
+}

@@ -1,0 +1,34 @@
+# ===== Deep learning framework =====
+# Install torch first with the CUDA variant matching your GPU, e.g.:
+#   pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cu126
+torch==2.6.0
+transformers==4.57.1
+accelerate
+sae-lens==6.39.0
+transformer-lens==2.17.0
+
+# ===== Tokenization =====
+tokenizers==0.22.1
+sentencepiece==0.2.1
+
+# ===== Numerical and scientific computing =====
+numpy==1.26.4
+scipy==1.15.2
+pandas==2.3.2
+scikit-learn
+
+# ===== Spatial autocorrelation (Moran's I and LISA) =====
+esda
+libpysal
+geopandas
+
+# ===== Plotting =====
+matplotlib==3.10.7
+seaborn
+adjustText
+
+# ===== Utilities =====
+safetensors==0.6.2
+tqdm
+einops==0.8.1
+wandb==0.25.1

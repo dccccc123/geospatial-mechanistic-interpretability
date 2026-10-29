@@ -1,0 +1,84 @@
+{
+  "l26_direction_feature": {
+    "n": 180,
+    "flip_rate": 0.49444444444444446,
+    "mean_delta_margin": -1.5934027777777777,
+    "median_delta_margin": -1.0
+  },
+  "l8_geographic_feature": {
+    "n": 180,
+    "flip_rate": 0.4166666666666667,
+    "mean_delta_margin": -0.9354166666666667,
+    "median_delta_margin": -0.625
+  },
+  "head_24": {
+    "n": 180,
+    "flip_rate": 0.3277777777777778,
+    "mean_delta_margin": -0.8645833333333334,
+    "median_delta_margin": -0.25
+  },
+  "head_25": {
+    "n": 180,
+    "flip_rate": 0.3611111111111111,
+    "mean_delta_margin": -0.49722222222222223,
+    "median_delta_margin": -0.5
+  },
+  "r35_cdla_vs_ablation": [
+    {
+      "direction": "East",
+      "feature_id": 47636,
+      "role": "target",
+      "cDLA": 2.153697967529297,
+      "mean_ablation_delta": -0.36607142857142855
+    },
+    {
+      "direction": "East",
+      "feature_id": 48165,
+      "role": "control",
+      "cDLA": -0.007121700793504715,
+      "mean_ablation_delta": 0.0
+    },
+    {
+      "direction": "West",
+      "feature_id": 56725,
+      "role": "target",
+      "cDLA": 3.0367624759674072,
+      "mean_ablation_delta": -0.5
+    },
+    {
+      "direction": "West",
+      "feature_id": 20109,
+      "role": "control",
+      "cDLA": 0.0040483055636286736,
+      "mean_ablation_delta": 0.0
+    },
+    {
+      "direction": "South",
+      "feature_id": 10801,
+      "role": "target",
+      "cDLA": 4.371382713317871,
+      "mean_ablation_delta": -0.9221491228070176
+    },
+    {
+      "direction": "South",
+      "feature_id": 20109,
+      "role": "control",
+      "cDLA": -0.0023706620559096336,
+      "mean_ablation_delta": 0.0043859649122807015
+    },
+    {
+      "direction": "North",
+      "feature_id": 26800,
+      "role": "target",
+      "cDLA": 5.176742076873779,
+      "mean_ablation_delta": -0.8466346153846154
+    },
+    {
+      "direction": "North",
+      "feature_id": 20109,
+      "role": "control",
+      "cDLA": 0.0040483055636286736,
+      "mean_ablation_delta": 0.0019230769230769232
+    }
+  ]
+}

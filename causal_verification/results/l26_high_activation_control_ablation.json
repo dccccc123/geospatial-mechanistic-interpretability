@@ -1,0 +1,3172 @@
+{
+  "experiment": "l26_high_activation_control_ablation",
+  "model_name": "Qwen/Qwen3-8B",
+  "target_layer": 26,
+  "targets": [
+    18707,
+    38915
+  ],
+  "n_controls_per_target": 2,
+  "control_matching": {
+    "18707": {
+      "target": {
+        "feature_id": 18707,
+        "mean_act": 140.9627227783203,
+        "firing_freq": 1.0,
+        "decoder_norm": 1.000000238418579,
+        "max_abs_proj": 0.017228344455361366
+      },
+      "controls": [
+        {
+          "feature_id": 60923,
+          "match_distance": 5.110141828790725,
+          "mean_act": 44.982200622558594,
+          "firing_freq": 1.0,
+          "decoder_norm": 1.0000001192092896,
+          "max_abs_proj": 0.08226928114891052
+        },
+        {
+          "feature_id": 62315,
+          "match_distance": 6.259303571330265,
+          "mean_act": 41.97836685180664,
+          "firing_freq": 1.0,
+          "decoder_norm": 1.0,
+          "max_abs_proj": 0.07636840641498566
+        }
+      ]
+    },
+    "38915": {
+      "target": {
+        "feature_id": 38915,
+        "mean_act": 46.99520492553711,
+        "firing_freq": 1.0,
+        "decoder_norm": 1.0,
+        "max_abs_proj": 0.06702399253845215
+      },
+      "controls": [
+        {
+          "feature_id": 62315,
+          "match_distance": 0.4665310913620839,
+          "mean_act": 41.97836685180664,
+          "firing_freq": 1.0,
+          "decoder_norm": 1.0,
+          "max_abs_proj": 0.07636840641498566
+        },
+        {
+          "feature_id": 36845,
+          "match_distance": 1.3735899300915513,
+          "mean_act": 36.74163055419922,
+          "firing_freq": 1.0,
+          "decoder_norm": 0.9999999403953552,
+          "max_abs_proj": 0.015231456607580185
+        }
+      ]
+    }
+  },
+  "summary": {
+    "18707": {
+      "target_median_delta": -3.78125,
+      "target_mean_delta": -3.6762152777777777,
+      "target_flip_rate": 0.8611111111111112,
+      "control_median_delta": -1.4375,
+      "control_mean_delta": -1.525,
+      "controls": [
+        {
+          "feature_id": 60923,
+          "median_delta": -2.0625
+        },
+        {
+          "feature_id": 62315,
+          "median_delta": -0.75
+        }
+      ],
+      "wilcoxon_target_vs_control_mean": {
+        "stat": 2051.5,
+        "p": 5.244221725586297e-18
+      }
+    },
+    "38915": {
+      "target_median_delta": -0.25,
+      "target_mean_delta": -0.19895833333333332,
+      "target_flip_rate": 0.6277777777777778,
+      "control_median_delta": -0.0625,
+      "control_mean_delta": -0.09461805555555555,
+      "controls": [
+        {
+          "feature_id": 62315,
+          "median_delta": -0.75
+        },
+        {
+          "feature_id": 36845,
+          "median_delta": 0.625
+        }
+      ],
+      "wilcoxon_target_vs_control_mean": {
+        "stat": 5266.5,
+        "p": 0.001275668658653602
+      }
+    }
+  },
+  "per_prompt": [
+    {
+      "index": 0,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 25.875,
+        "West": 24.125,
+        "South": 29.125,
+        "North": 23.375
+      },
+      "deltas": {
+        "18707": -4.625,
+        "38915": -0.5,
+        "60923": -2.125,
+        "62315": -1.0,
+        "36845": 0.5
+      }
+    },
+    {
+      "index": 1,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 18.875,
+        "West": 23.0,
+        "South": 23.5,
+        "North": 21.125
+      },
+      "deltas": {
+        "18707": -4.5,
+        "38915": 0.0,
+        "60923": -0.75,
+        "62315": 0.0,
+        "36845": 0.625
+      }
+    },
+    {
+      "index": 2,
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 22.375,
+        "West": 22.25,
+        "South": 26.375,
+        "North": 26.375
+      },
+      "deltas": {
+        "18707": -1.5,
+        "38915": -0.875,
+        "60923": -1.875,
+        "62315": -0.625,
+        "36845": -0.25
+      }
+    },
+    {
+      "index": 3,
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 27.625,
+        "West": 21.125,
+        "South": 28.0,
+        "North": 21.625
+      },
+      "deltas": {
+        "18707": -2.25,
+        "38915": -0.375,
+        "60923": -1.625,
+        "62315": -0.75,
+        "36845": 0.375
+      }
+    },
+    {
+      "index": 4,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 19.5,
+        "West": 22.125,
+        "South": 29.25,
+        "North": 18.0
+      },
+      "deltas": {
+        "18707": -1.625,
+        "38915": -0.375,
+        "60923": -1.25,
+        "62315": 0.0,
+        "36845": 1.125
+      }
+    },
+    {
+      "index": 5,
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 23.625,
+        "West": 23.25,
+        "South": 24.75,
+        "North": 25.0
+      },
+      "deltas": {
+        "18707": -6.125,
+        "38915": 0.375,
+        "60923": -3.25,
+        "62315": -1.375,
+        "36845": 0.875
+      }
+    },
+    {
+      "index": 6,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 21.625,
+        "West": 22.875,
+        "South": 23.0,
+        "North": 25.0
+      },
+      "deltas": {
+        "18707": -4.0,
+        "38915": 0.0,
+        "60923": -1.125,
+        "62315": -0.375,
+        "36845": 0.625
+      }
+    },
+    {
+      "index": 7,
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 27.125,
+        "West": 23.625,
+        "South": 27.25,
+        "North": 24.0
+      },
+      "deltas": {
+        "18707": -2.75,
+        "38915": -0.5,
+        "60923": -3.125,
+        "62315": -1.25,
+        "36845": 0.0
+      }
+    },
+    {
+      "index": 8,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 25.25,
+        "West": 24.875,
+        "South": 28.625,
+        "North": 24.75
+      },
+      "deltas": {
+        "18707": -6.625,
+        "38915": -0.25,
+        "60923": -3.0,
+        "62315": -1.125,
+        "36845": 1.0
+      }
+    },
+    {
+      "index": 9,
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 28.75,
+        "West": 23.5,
+        "South": 25.75,
+        "North": 26.875
+      },
+      "deltas": {
+        "18707": 0.0,
+        "38915": 0.625,
+        "60923": -1.125,
+        "62315": 0.375,
+        "36845": 1.75
+      }
+    },
+    {
+      "index": 10,
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 23.625,
+        "West": 23.0,
+        "South": 24.125,
+        "North": 24.125
+      },
+      "deltas": {
+        "18707": -6.0,
+        "38915": 0.125,
+        "60923": -3.5,
+        "62315": -1.75,
+        "36845": 0.875
+      }
+    },
+    {
+      "index": 11,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 23.0,
+        "West": 24.75,
+        "South": 25.75,
+        "North": 25.0
+      },
+      "deltas": {
+        "18707": -3.75,
+        "38915": 0.375,
+        "60923": -2.125,
+        "62315": -0.375,
+        "36845": 0.625
+      }
+    },
+    {
+      "index": 12,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 23.125,
+        "West": 23.5,
+        "South": 23.75,
+        "North": 24.875
+      },
+      "deltas": {
+        "18707": -0.375,
+        "38915": 0.0,
+        "60923": -1.625,
+        "62315": -0.875,
+        "36845": 0.375
+      }
+    },
+    {
+      "index": 13,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 22.25,
+        "West": 23.375,
+        "South": 24.5,
+        "North": 23.75
+      },
+      "deltas": {
+        "18707": -0.5,
+        "38915": 0.0,
+        "60923": -1.5,
+        "62315": -0.25,
+        "36845": 0.5
+      }
+    },
+    {
+      "index": 14,
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 23.125,
+        "West": 22.5,
+        "South": 23.875,
+        "North": 24.125
+      },
+      "deltas": {
+        "18707": -8.25,
+        "38915": 0.5,
+        "60923": -3.25,
+        "62315": -1.5,
+        "36845": 1.375
+      }
+    },
+    {
+      "index": 15,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 24.875,
+        "West": 25.5,
+        "South": 28.5,
+        "North": 24.75
+      },
+      "deltas": {
+        "18707": -5.9375,
+        "38915": -0.375,
+        "60923": -3.375,
+        "62315": -1.25,
+        "36845": 0.25
+      }
+    },
+    {
+      "index": 16,
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 27.0,
+        "West": 25.375,
+        "South": 27.5,
+        "North": 26.125
+      },
+      "deltas": {
+        "18707": -3.625,
+        "38915": -0.25,
+        "60923": -1.875,
+        "62315": -0.75,
+        "36845": 0.5
+      }
+    },
+    {
+      "index": 17,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 25.875,
+        "West": 24.75,
+        "South": 28.375,
+        "North": 25.625
+      },
+      "deltas": {
+        "18707": -4.8125,
+        "38915": -1.0,
+        "60923": -1.875,
+        "62315": -1.625,
+        "36845": 0.375
+      }
+    },
+    {
+      "index": 18,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 26.875,
+        "West": 24.375,
+        "South": 30.0,
+        "North": 24.375
+      },
+      "deltas": {
+        "18707": -1.375,
+        "38915": -0.375,
+        "60923": -2.1875,
+        "62315": -1.0,
+        "36845": 0.5
+      }
+    },
+    {
+      "index": 19,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 21.0,
+        "West": 24.125,
+        "South": 23.375,
+        "North": 25.375
+      },
+      "deltas": {
+        "18707": -2.875,
+        "38915": 0.0,
+        "60923": -1.0,
+        "62315": -0.375,
+        "36845": 0.25
+      }
+    },
+    {
+      "index": 20,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 25.5,
+        "West": 25.625,
+        "South": 27.375,
+        "North": 26.625
+      },
+      "deltas": {
+        "18707": 2.875,
+        "38915": 0.0,
+        "60923": -1.625,
+        "62315": -0.625,
+        "36845": 0.875
+      }
+    },
+    {
+      "index": 21,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 21.125,
+        "West": 24.0,
+        "South": 24.375,
+        "North": 23.875
+      },
+      "deltas": {
+        "18707": -1.875,
+        "38915": 0.125,
+        "60923": -1.625,
+        "62315": -0.25,
+        "36845": 0.625
+      }
+    },
+    {
+      "index": 22,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 22.875,
+        "West": 23.875,
+        "South": 24.875,
+        "North": 24.375
+      },
+      "deltas": {
+        "18707": -3.375,
+        "38915": 0.375,
+        "60923": -1.5,
+        "62315": -0.5,
+        "36845": 0.625
+      }
+    },
+    {
+      "index": 23,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 22.75,
+        "West": 24.75,
+        "South": 24.25,
+        "North": 26.875
+      },
+      "deltas": {
+        "18707": -6.125,
+        "38915": 0.375,
+        "60923": -1.75,
+        "62315": -0.375,
+        "36845": 1.625
+      }
+    },
+    {
+      "index": 24,
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 26.0,
+        "West": 25.0,
+        "South": 26.625,
+        "North": 25.625
+      },
+      "deltas": {
+        "18707": -3.75,
+        "38915": -0.5,
+        "60923": -1.875,
+        "62315": -1.5,
+        "36845": 0.25
+      }
+    },
+    {
+      "index": 25,
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 23.5,
+        "West": 23.25,
+        "South": 24.75,
+        "North": 24.75
+      },
+      "deltas": {
+        "18707": -5.8125,
+        "38915": -0.75,
+        "60923": -3.5,
+        "62315": -1.25,
+        "36845": 0.625
+      }
+    },
+    {
+      "index": 26,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 22.875,
+        "West": 22.75,
+        "South": 23.375,
+        "North": 23.75
+      },
+      "deltas": {
+        "18707": -0.375,
+        "38915": -0.125,
+        "60923": -2.0,
+        "62315": -1.0,
+        "36845": 0.625
+      }
+    },
+    {
+      "index": 27,
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 28.25,
+        "West": 27.375,
+        "South": 29.375,
+        "North": 28.625
+      },
+      "deltas": {
+        "18707": -4.0,
+        "38915": -0.375,
+        "60923": -3.375,
+        "62315": -1.0,
+        "36845": 0.375
+      }
+    },
+    {
+      "index": 28,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 22.125,
+        "West": 22.875,
+        "South": 23.25,
+        "North": 25.25
+      },
+      "deltas": {
+        "18707": 1.75,
+        "38915": 0.125,
+        "60923": -1.125,
+        "62315": -0.375,
+        "36845": 0.625
+      }
+    },
+    {
+      "index": 29,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 22.625,
+        "West": 22.75,
+        "South": 24.0,
+        "North": 23.25
+      },
+      "deltas": {
+        "18707": -0.625,
+        "38915": -0.125,
+        "60923": -1.75,
+        "62315": -0.625,
+        "36845": 0.25
+      }
+    },
+    {
+      "index": 30,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 26.625,
+        "West": 23.375,
+        "South": 28.625,
+        "North": 25.0
+      },
+      "deltas": {
+        "18707": -3.75,
+        "38915": -0.375,
+        "60923": -1.75,
+        "62315": -1.125,
+        "36845": 0.5
+      }
+    },
+    {
+      "index": 31,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 22.125,
+        "West": 23.375,
+        "South": 23.375,
+        "North": 24.75
+      },
+      "deltas": {
+        "18707": -7.5,
+        "38915": 0.875,
+        "60923": -1.875,
+        "62315": -0.375,
+        "36845": 1.625
+      }
+    },
+    {
+      "index": 32,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 25.375,
+        "West": 24.75,
+        "South": 25.5,
+        "North": 27.125
+      },
+      "deltas": {
+        "18707": -6.875,
+        "38915": -0.5,
+        "60923": -2.625,
+        "62315": -1.75,
+        "36845": 0.375
+      }
+    },
+    {
+      "index": 33,
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 25.0,
+        "West": 23.875,
+        "South": 25.5,
+        "North": 25.875
+      },
+      "deltas": {
+        "18707": -4.75,
+        "38915": -0.25,
+        "60923": -2.75,
+        "62315": -0.75,
+        "36845": 1.0
+      }
+    },
+    {
+      "index": 34,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 20.75,
+        "West": 24.125,
+        "South": 22.375,
+        "North": 25.125
+      },
+      "deltas": {
+        "18707": -0.9375,
+        "38915": -0.0625,
+        "60923": -1.1875,
+        "62315": -0.5625,
+        "36845": 0.5625
+      }
+    },
+    {
+      "index": 35,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 23.125,
+        "West": 26.25,
+        "South": 26.5,
+        "North": 27.75
+      },
+      "deltas": {
+        "18707": -3.8125,
+        "38915": -0.375,
+        "60923": -1.375,
+        "62315": -0.625,
+        "36845": 0.125
+      }
+    },
+    {
+      "index": 36,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 23.375,
+        "West": 24.0,
+        "South": 25.875,
+        "North": 29.5
+      },
+      "deltas": {
+        "18707": -3.625,
+        "38915": -0.125,
+        "60923": -3.75,
+        "62315": -1.5,
+        "36845": 0.125
+      }
+    },
+    {
+      "index": 37,
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 24.625,
+        "West": 23.75,
+        "South": 24.375,
+        "North": 25.25
+      },
+      "deltas": {
+        "18707": -0.5,
+        "38915": -1.25,
+        "60923": -2.625,
+        "62315": -0.5,
+        "36845": 0.625
+      }
+    },
+    {
+      "index": 38,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 23.125,
+        "West": 23.625,
+        "South": 23.25,
+        "North": 25.125
+      },
+      "deltas": {
+        "18707": -2.875,
+        "38915": 0.0,
+        "60923": -1.125,
+        "62315": -0.5,
+        "36845": 0.875
+      }
+    },
+    {
+      "index": 39,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 25.875,
+        "West": 25.125,
+        "South": 26.375,
+        "North": 27.25
+      },
+      "deltas": {
+        "18707": -7.8125,
+        "38915": -0.625,
+        "60923": -3.25,
+        "62315": -2.0,
+        "36845": 0.375
+      }
+    },
+    {
+      "index": 40,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 23.5,
+        "West": 24.375,
+        "South": 25.375,
+        "North": 24.625
+      },
+      "deltas": {
+        "18707": -7.5,
+        "38915": 0.5,
+        "60923": -3.875,
+        "62315": -1.25,
+        "36845": 0.75
+      }
+    },
+    {
+      "index": 41,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 24.0,
+        "West": 23.875,
+        "South": 25.5,
+        "North": 24.875
+      },
+      "deltas": {
+        "18707": -5.5625,
+        "38915": -0.375,
+        "60923": -2.375,
+        "62315": -1.0,
+        "36845": 1.0
+      }
+    },
+    {
+      "index": 42,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 25.375,
+        "West": 25.375,
+        "South": 26.0,
+        "North": 26.0
+      },
+      "deltas": {
+        "18707": -8.0,
+        "38915": 1.5,
+        "60923": -3.625,
+        "62315": -1.0,
+        "36845": 1.125
+      }
+    },
+    {
+      "index": 43,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 26.0,
+        "West": 26.5,
+        "South": 27.125,
+        "North": 28.25
+      },
+      "deltas": {
+        "18707": -8.25,
+        "38915": -0.75,
+        "60923": -4.625,
+        "62315": -1.375,
+        "36845": 1.0
+      }
+    },
+    {
+      "index": 44,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 24.125,
+        "West": 24.375,
+        "South": 24.875,
+        "North": 25.875
+      },
+      "deltas": {
+        "18707": -8.5,
+        "38915": -0.5,
+        "60923": -2.0,
+        "62315": -1.0,
+        "36845": 1.125
+      }
+    },
+    {
+      "index": 45,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 21.75,
+        "West": 23.75,
+        "South": 21.625,
+        "North": 28.5
+      },
+      "deltas": {
+        "18707": -3.0625,
+        "38915": -0.5,
+        "60923": -2.375,
+        "62315": -1.375,
+        "36845": 1.25
+      }
+    },
+    {
+      "index": 46,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 24.875,
+        "West": 24.125,
+        "South": 23.5,
+        "North": 27.875
+      },
+      "deltas": {
+        "18707": -6.3125,
+        "38915": -0.875,
+        "60923": -1.625,
+        "62315": -1.25,
+        "36845": 0.125
+      }
+    },
+    {
+      "index": 47,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 21.875,
+        "West": 20.75,
+        "South": 23.75,
+        "North": 27.875
+      },
+      "deltas": {
+        "18707": -3.0,
+        "38915": -0.125,
+        "60923": -2.125,
+        "62315": -0.75,
+        "36845": 0.75
+      }
+    },
+    {
+      "index": 48,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 21.5,
+        "West": 20.625,
+        "South": 21.125,
+        "North": 27.75
+      },
+      "deltas": {
+        "18707": -2.5,
+        "38915": -0.25,
+        "60923": -0.875,
+        "62315": -0.75,
+        "36845": 0.5
+      }
+    },
+    {
+      "index": 49,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 23.5,
+        "West": 24.875,
+        "South": 23.375,
+        "North": 28.125
+      },
+      "deltas": {
+        "18707": -6.125,
+        "38915": -0.625,
+        "60923": -2.375,
+        "62315": -1.25,
+        "36845": 0.875
+      }
+    },
+    {
+      "index": 50,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 23.75,
+        "West": 23.875,
+        "South": 28.25,
+        "North": 22.375
+      },
+      "deltas": {
+        "18707": 2.0,
+        "38915": 0.0,
+        "60923": -1.5,
+        "62315": -0.375,
+        "36845": 0.875
+      }
+    },
+    {
+      "index": 51,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 22.375,
+        "West": 22.125,
+        "South": 22.375,
+        "North": 23.875
+      },
+      "deltas": {
+        "18707": 0.125,
+        "38915": 0.125,
+        "60923": -1.125,
+        "62315": -0.5,
+        "36845": 0.25
+      }
+    },
+    {
+      "index": 52,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 25.125,
+        "West": 18.875,
+        "South": 28.625,
+        "North": 17.75
+      },
+      "deltas": {
+        "18707": -2.125,
+        "38915": -0.375,
+        "60923": -2.25,
+        "62315": -0.625,
+        "36845": 1.25
+      }
+    },
+    {
+      "index": 53,
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 23.75,
+        "West": 22.0,
+        "South": 24.75,
+        "North": 24.25
+      },
+      "deltas": {
+        "18707": -1.375,
+        "38915": 0.0,
+        "60923": -2.0,
+        "62315": -0.625,
+        "36845": 0.75
+      }
+    },
+    {
+      "index": 54,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 23.375,
+        "West": 22.75,
+        "South": 23.375,
+        "North": 25.75
+      },
+      "deltas": {
+        "18707": -6.0625,
+        "38915": 0.125,
+        "60923": -1.5,
+        "62315": -0.75,
+        "36845": 0.875
+      }
+    },
+    {
+      "index": 55,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 23.75,
+        "West": 21.625,
+        "South": 26.5,
+        "North": 21.75
+      },
+      "deltas": {
+        "18707": 0.125,
+        "38915": -0.125,
+        "60923": -1.625,
+        "62315": -0.375,
+        "36845": 0.625
+      }
+    },
+    {
+      "index": 56,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 22.5,
+        "West": 22.375,
+        "South": 24.125,
+        "North": 23.375
+      },
+      "deltas": {
+        "18707": -1.375,
+        "38915": -0.25,
+        "60923": -1.5,
+        "62315": -0.5,
+        "36845": 0.25
+      }
+    },
+    {
+      "index": 57,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 24.875,
+        "West": 26.75,
+        "South": 26.375,
+        "North": 31.0
+      },
+      "deltas": {
+        "18707": -7.25,
+        "38915": -0.875,
+        "60923": -3.5,
+        "62315": -1.375,
+        "36845": 0.5
+      }
+    },
+    {
+      "index": 58,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 24.5,
+        "West": 25.5,
+        "South": 25.0,
+        "North": 27.5
+      },
+      "deltas": {
+        "18707": -3.5,
+        "38915": 0.5,
+        "60923": -1.75,
+        "62315": -0.5,
+        "36845": 1.5
+      }
+    },
+    {
+      "index": 59,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 23.375,
+        "West": 24.5,
+        "South": 23.375,
+        "North": 25.625
+      },
+      "deltas": {
+        "18707": -1.0,
+        "38915": -0.125,
+        "60923": -1.625,
+        "62315": -0.5,
+        "36845": 0.5
+      }
+    },
+    {
+      "index": 60,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 20.75,
+        "West": 21.625,
+        "South": 25.375,
+        "North": 29.625
+      },
+      "deltas": {
+        "18707": -3.875,
+        "38915": 0.125,
+        "60923": -2.75,
+        "62315": -1.125,
+        "36845": 1.0
+      }
+    },
+    {
+      "index": 61,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 19.875,
+        "West": 20.875,
+        "South": 24.25,
+        "North": 26.375
+      },
+      "deltas": {
+        "18707": -5.125,
+        "38915": 0.0,
+        "60923": -3.0,
+        "62315": -0.875,
+        "36845": 1.25
+      }
+    },
+    {
+      "index": 62,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 27.875,
+        "West": 20.375,
+        "South": 30.5,
+        "North": 18.75
+      },
+      "deltas": {
+        "18707": -1.375,
+        "38915": -0.625,
+        "60923": -2.0,
+        "62315": -0.75,
+        "36845": 0.625
+      }
+    },
+    {
+      "index": 63,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 23.625,
+        "West": 22.875,
+        "South": 25.75,
+        "North": 23.0
+      },
+      "deltas": {
+        "18707": -5.25,
+        "38915": -0.25,
+        "60923": -2.0,
+        "62315": -0.5,
+        "36845": 0.875
+      }
+    },
+    {
+      "index": 64,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 23.375,
+        "West": 20.375,
+        "South": 29.5,
+        "North": 17.125
+      },
+      "deltas": {
+        "18707": -3.125,
+        "38915": -0.375,
+        "60923": -1.625,
+        "62315": -0.375,
+        "36845": 1.125
+      }
+    },
+    {
+      "index": 65,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 22.5,
+        "West": 19.5,
+        "South": 25.625,
+        "North": 18.0
+      },
+      "deltas": {
+        "18707": 0.5,
+        "38915": -0.125,
+        "60923": -1.25,
+        "62315": -0.25,
+        "36845": 1.25
+      }
+    },
+    {
+      "index": 66,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 20.625,
+        "West": 22.0,
+        "South": 22.625,
+        "North": 28.75
+      },
+      "deltas": {
+        "18707": -3.625,
+        "38915": -0.25,
+        "60923": -3.375,
+        "62315": -1.5,
+        "36845": 1.0
+      }
+    },
+    {
+      "index": 67,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 23.75,
+        "West": 25.25,
+        "South": 26.75,
+        "North": 27.875
+      },
+      "deltas": {
+        "18707": -7.0625,
+        "38915": -0.875,
+        "60923": -3.3125,
+        "62315": -1.375,
+        "36845": -0.375
+      }
+    },
+    {
+      "index": 68,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 22.5,
+        "West": 23.625,
+        "South": 25.125,
+        "North": 23.125
+      },
+      "deltas": {
+        "18707": -3.75,
+        "38915": -0.25,
+        "60923": -1.25,
+        "62315": -0.5,
+        "36845": 1.125
+      }
+    },
+    {
+      "index": 69,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 24.25,
+        "West": 24.625,
+        "South": 25.375,
+        "North": 25.625
+      },
+      "deltas": {
+        "18707": 1.0,
+        "38915": 0.125,
+        "60923": -1.25,
+        "62315": -0.5,
+        "36845": 0.5
+      }
+    },
+    {
+      "index": 70,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 23.25,
+        "West": 24.5,
+        "South": 26.75,
+        "North": 23.875
+      },
+      "deltas": {
+        "18707": -6.75,
+        "38915": -1.25,
+        "60923": -5.0,
+        "62315": -2.25,
+        "36845": 0.625
+      }
+    },
+    {
+      "index": 71,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 22.25,
+        "West": 24.75,
+        "South": 23.375,
+        "North": 26.25
+      },
+      "deltas": {
+        "18707": -9.3125,
+        "38915": -0.875,
+        "60923": -3.125,
+        "62315": -1.125,
+        "36845": 0.375
+      }
+    },
+    {
+      "index": 72,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 24.25,
+        "West": 25.0,
+        "South": 26.5,
+        "North": 25.625
+      },
+      "deltas": {
+        "18707": -2.5,
+        "38915": 0.0,
+        "60923": -2.25,
+        "62315": -0.5,
+        "36845": 1.25
+      }
+    },
+    {
+      "index": 73,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 25.875,
+        "West": 26.5,
+        "South": 27.875,
+        "North": 26.75
+      },
+      "deltas": {
+        "18707": -8.5,
+        "38915": -0.5,
+        "60923": -3.5,
+        "62315": -1.0,
+        "36845": 0.5
+      }
+    },
+    {
+      "index": 74,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 23.375,
+        "West": 23.125,
+        "South": 25.0,
+        "North": 24.5
+      },
+      "deltas": {
+        "18707": -6.5,
+        "38915": -0.875,
+        "60923": -2.875,
+        "62315": -1.5,
+        "36845": 0.125
+      }
+    },
+    {
+      "index": 75,
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 25.75,
+        "West": 25.0,
+        "South": 26.375,
+        "North": 27.125
+      },
+      "deltas": {
+        "18707": -4.125,
+        "38915": -1.0,
+        "60923": -2.375,
+        "62315": -0.875,
+        "36845": 0.0
+      }
+    },
+    {
+      "index": 76,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 23.25,
+        "West": 24.375,
+        "South": 24.0,
+        "North": 25.875
+      },
+      "deltas": {
+        "18707": -5.25,
+        "38915": 0.625,
+        "60923": -2.125,
+        "62315": -1.0,
+        "36845": 1.625
+      }
+    },
+    {
+      "index": 77,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 24.75,
+        "West": 22.625,
+        "South": 27.375,
+        "North": 22.625
+      },
+      "deltas": {
+        "18707": -4.0,
+        "38915": -0.4375,
+        "60923": -1.3125,
+        "62315": -0.9375,
+        "36845": 0.0
+      }
+    },
+    {
+      "index": 78,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 22.75,
+        "West": 24.5,
+        "South": 24.75,
+        "North": 26.0
+      },
+      "deltas": {
+        "18707": -5.3125,
+        "38915": -0.25,
+        "60923": -0.75,
+        "62315": -1.125,
+        "36845": 0.0
+      }
+    },
+    {
+      "index": 79,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 24.125,
+        "West": 24.375,
+        "South": 29.125,
+        "North": 24.75
+      },
+      "deltas": {
+        "18707": -2.8125,
+        "38915": 0.0,
+        "60923": -2.0,
+        "62315": -0.9375,
+        "36845": 0.375
+      }
+    },
+    {
+      "index": 80,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 23.0,
+        "West": 22.75,
+        "South": 23.75,
+        "North": 24.125
+      },
+      "deltas": {
+        "18707": -1.875,
+        "38915": -0.125,
+        "60923": -0.75,
+        "62315": -0.375,
+        "36845": 0.5
+      }
+    },
+    {
+      "index": 81,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 24.75,
+        "West": 26.375,
+        "South": 26.375,
+        "North": 29.0
+      },
+      "deltas": {
+        "18707": -5.4375,
+        "38915": -0.625,
+        "60923": -2.5,
+        "62315": -0.875,
+        "36845": 0.875
+      }
+    },
+    {
+      "index": 82,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 23.75,
+        "West": 24.5,
+        "South": 25.625,
+        "North": 24.75
+      },
+      "deltas": {
+        "18707": 0.0,
+        "38915": -0.125,
+        "60923": -1.5,
+        "62315": -0.5,
+        "36845": 0.625
+      }
+    },
+    {
+      "index": 83,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 21.125,
+        "West": 24.375,
+        "South": 24.25,
+        "North": 27.0
+      },
+      "deltas": {
+        "18707": -4.1875,
+        "38915": -0.625,
+        "60923": -1.25,
+        "62315": -1.0,
+        "36845": 0.125
+      }
+    },
+    {
+      "index": 84,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 29.875,
+        "West": 29.375,
+        "South": 31.375,
+        "North": 30.75
+      },
+      "deltas": {
+        "18707": -8.1875,
+        "38915": -1.75,
+        "60923": -3.125,
+        "62315": -1.375,
+        "36845": -0.125
+      }
+    },
+    {
+      "index": 85,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 25.25,
+        "West": 25.0,
+        "South": 26.125,
+        "North": 25.75
+      },
+      "deltas": {
+        "18707": 0.25,
+        "38915": 0.0,
+        "60923": -1.625,
+        "62315": -0.375,
+        "36845": 0.5
+      }
+    },
+    {
+      "index": 86,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 24.625,
+        "West": 25.125,
+        "South": 25.875,
+        "North": 26.25
+      },
+      "deltas": {
+        "18707": 0.625,
+        "38915": 0.25,
+        "60923": -2.125,
+        "62315": -0.625,
+        "36845": 0.5
+      }
+    },
+    {
+      "index": 87,
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 24.75,
+        "West": 23.5,
+        "South": 25.75,
+        "North": 25.5
+      },
+      "deltas": {
+        "18707": -5.125,
+        "38915": -0.125,
+        "60923": -2.6875,
+        "62315": -1.25,
+        "36845": 0.75
+      }
+    },
+    {
+      "index": 88,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 23.125,
+        "West": 23.0,
+        "South": 23.75,
+        "North": 25.125
+      },
+      "deltas": {
+        "18707": -5.1875,
+        "38915": 0.875,
+        "60923": -1.875,
+        "62315": -0.25,
+        "36845": 2.0
+      }
+    },
+    {
+      "index": 89,
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 27.375,
+        "West": 26.125,
+        "South": 28.25,
+        "North": 28.125
+      },
+      "deltas": {
+        "18707": -8.75,
+        "38915": -0.625,
+        "60923": -5.5,
+        "62315": -1.5,
+        "36845": 0.25
+      }
+    },
+    {
+      "index": 90,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 21.0,
+        "West": 26.625,
+        "South": 22.875,
+        "North": 28.75
+      },
+      "deltas": {
+        "18707": -5.625,
+        "38915": -0.875,
+        "60923": -2.875,
+        "62315": -1.375,
+        "36845": 1.125
+      }
+    },
+    {
+      "index": 91,
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 26.0,
+        "West": 21.125,
+        "South": 25.25,
+        "North": 24.75
+      },
+      "deltas": {
+        "18707": -1.625,
+        "38915": 0.0,
+        "60923": -0.75,
+        "62315": -0.125,
+        "36845": 0.75
+      }
+    },
+    {
+      "index": 92,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 22.75,
+        "West": 26.25,
+        "South": 28.625,
+        "North": 23.25
+      },
+      "deltas": {
+        "18707": -6.75,
+        "38915": -1.125,
+        "60923": -3.125,
+        "62315": -0.875,
+        "36845": 0.625
+      }
+    },
+    {
+      "index": 93,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 18.625,
+        "West": 26.75,
+        "South": 21.875,
+        "North": 27.0
+      },
+      "deltas": {
+        "18707": -5.0,
+        "38915": -0.125,
+        "60923": -2.125,
+        "62315": -0.5,
+        "36845": 0.875
+      }
+    },
+    {
+      "index": 94,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 25.125,
+        "West": 24.375,
+        "South": 25.875,
+        "North": 26.875
+      },
+      "deltas": {
+        "18707": -4.4375,
+        "38915": -0.5,
+        "60923": -2.25,
+        "62315": -1.875,
+        "36845": -0.125
+      }
+    },
+    {
+      "index": 95,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 23.375,
+        "West": 23.125,
+        "South": 25.25,
+        "North": 24.125
+      },
+      "deltas": {
+        "18707": 2.0,
+        "38915": -0.125,
+        "60923": -1.0,
+        "62315": -0.375,
+        "36845": 0.375
+      }
+    },
+    {
+      "index": 96,
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 25.25,
+        "West": 23.625,
+        "South": 27.375,
+        "North": 26.375
+      },
+      "deltas": {
+        "18707": -3.625,
+        "38915": -1.25,
+        "60923": -2.5,
+        "62315": -0.625,
+        "36845": 0.75
+      }
+    },
+    {
+      "index": 97,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 21.125,
+        "West": 27.0,
+        "South": 22.375,
+        "North": 28.875
+      },
+      "deltas": {
+        "18707": -5.25,
+        "38915": -0.125,
+        "60923": -3.125,
+        "62315": -0.5,
+        "36845": 1.625
+      }
+    },
+    {
+      "index": 98,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 22.75,
+        "West": 21.5,
+        "South": 22.5,
+        "North": 27.75
+      },
+      "deltas": {
+        "18707": -7.0625,
+        "38915": -0.125,
+        "60923": -2.75,
+        "62315": -0.625,
+        "36845": 1.125
+      }
+    },
+    {
+      "index": 99,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 21.0,
+        "West": 28.125,
+        "South": 21.875,
+        "North": 28.25
+      },
+      "deltas": {
+        "18707": -1.0,
+        "38915": 1.125,
+        "60923": -2.25,
+        "62315": -0.375,
+        "36845": 1.375
+      }
+    },
+    {
+      "index": 100,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 23.875,
+        "West": 25.5,
+        "South": 25.5,
+        "North": 27.25
+      },
+      "deltas": {
+        "18707": -9.75,
+        "38915": 0.0,
+        "60923": -3.625,
+        "62315": -1.625,
+        "36845": 1.0
+      }
+    },
+    {
+      "index": 101,
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 23.5,
+        "West": 21.5,
+        "South": 24.0,
+        "North": 24.0
+      },
+      "deltas": {
+        "18707": 3.125,
+        "38915": 0.5,
+        "60923": -1.125,
+        "62315": -0.125,
+        "36845": 0.625
+      }
+    },
+    {
+      "index": 102,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 23.25,
+        "West": 26.0,
+        "South": 24.5,
+        "North": 25.375
+      },
+      "deltas": {
+        "18707": 0.625,
+        "38915": 1.375,
+        "60923": -2.375,
+        "62315": -0.625,
+        "36845": 0.625
+      }
+    },
+    {
+      "index": 103,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 23.75,
+        "West": 24.375,
+        "South": 24.875,
+        "North": 24.5
+      },
+      "deltas": {
+        "18707": 0.375,
+        "38915": 0.125,
+        "60923": -1.375,
+        "62315": -0.375,
+        "36845": 0.375
+      }
+    },
+    {
+      "index": 104,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 24.0,
+        "West": 25.25,
+        "South": 25.375,
+        "North": 27.0
+      },
+      "deltas": {
+        "18707": -5.5,
+        "38915": 0.5,
+        "60923": -2.25,
+        "62315": -0.625,
+        "36845": 1.625
+      }
+    },
+    {
+      "index": 105,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 24.5,
+        "West": 24.0,
+        "South": 24.75,
+        "North": 25.875
+      },
+      "deltas": {
+        "18707": -6.4375,
+        "38915": 0.25,
+        "60923": -1.875,
+        "62315": -0.75,
+        "36845": 0.5
+      }
+    },
+    {
+      "index": 106,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 22.375,
+        "West": 26.5,
+        "South": 24.5,
+        "North": 26.0
+      },
+      "deltas": {
+        "18707": -7.5,
+        "38915": 0.5,
+        "60923": -3.25,
+        "62315": -0.75,
+        "36845": 0.75
+      }
+    },
+    {
+      "index": 107,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 20.5,
+        "West": 26.5,
+        "South": 23.375,
+        "North": 26.75
+      },
+      "deltas": {
+        "18707": -6.0,
+        "38915": -0.375,
+        "60923": -2.5,
+        "62315": -0.5,
+        "36845": 0.625
+      }
+    },
+    {
+      "index": 108,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 19.75,
+        "West": 26.75,
+        "South": 21.75,
+        "North": 30.5
+      },
+      "deltas": {
+        "18707": -2.75,
+        "38915": -0.375,
+        "60923": -2.0,
+        "62315": -0.875,
+        "36845": 0.75
+      }
+    },
+    {
+      "index": 109,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 26.5,
+        "West": 25.25,
+        "South": 28.875,
+        "North": 26.75
+      },
+      "deltas": {
+        "18707": -3.625,
+        "38915": -0.8125,
+        "60923": -1.8125,
+        "62315": -1.0625,
+        "36845": 0.125
+      }
+    },
+    {
+      "index": 110,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 26.125,
+        "West": 25.375,
+        "South": 26.25,
+        "North": 27.25
+      },
+      "deltas": {
+        "18707": -10.375,
+        "38915": -0.125,
+        "60923": -3.75,
+        "62315": -1.375,
+        "36845": 0.625
+      }
+    },
+    {
+      "index": 111,
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 31.125,
+        "West": 21.25,
+        "South": 24.5,
+        "North": 28.0
+      },
+      "deltas": {
+        "18707": -3.0,
+        "38915": -0.375,
+        "60923": -1.75,
+        "62315": -0.625,
+        "36845": 0.0
+      }
+    },
+    {
+      "index": 112,
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 27.125,
+        "West": 24.875,
+        "South": 26.5,
+        "North": 27.625
+      },
+      "deltas": {
+        "18707": -3.5,
+        "38915": -0.625,
+        "60923": -2.375,
+        "62315": -0.75,
+        "36845": -0.125
+      }
+    },
+    {
+      "index": 113,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 33.0,
+        "West": 28.625,
+        "South": 37.25,
+        "North": 28.0
+      },
+      "deltas": {
+        "18707": -2.125,
+        "38915": -0.125,
+        "60923": -2.375,
+        "62315": -0.75,
+        "36845": 1.125
+      }
+    },
+    {
+      "index": 114,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 21.5,
+        "West": 23.5,
+        "South": 21.875,
+        "North": 24.875
+      },
+      "deltas": {
+        "18707": 3.5,
+        "38915": 0.25,
+        "60923": -1.375,
+        "62315": -0.5,
+        "36845": 0.5
+      }
+    },
+    {
+      "index": 115,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 22.5,
+        "West": 22.75,
+        "South": 23.0,
+        "North": 24.125
+      },
+      "deltas": {
+        "18707": -1.625,
+        "38915": -0.25,
+        "60923": -1.125,
+        "62315": -0.625,
+        "36845": 0.375
+      }
+    },
+    {
+      "index": 116,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 22.625,
+        "West": 22.625,
+        "South": 22.5,
+        "North": 23.375
+      },
+      "deltas": {
+        "18707": 3.875,
+        "38915": 0.0,
+        "60923": -0.875,
+        "62315": -0.5,
+        "36845": 0.375
+      }
+    },
+    {
+      "index": 117,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 24.625,
+        "West": 25.5,
+        "South": 26.625,
+        "North": 26.25
+      },
+      "deltas": {
+        "18707": -2.0,
+        "38915": 0.75,
+        "60923": -1.875,
+        "62315": -0.625,
+        "36845": 1.25
+      }
+    },
+    {
+      "index": 118,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 22.75,
+        "West": 20.375,
+        "South": 28.125,
+        "North": 18.75
+      },
+      "deltas": {
+        "18707": 0.125,
+        "38915": -0.25,
+        "60923": -1.75,
+        "62315": -0.25,
+        "36845": 1.0
+      }
+    },
+    {
+      "index": 119,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 22.125,
+        "West": 22.0,
+        "South": 22.875,
+        "North": 23.25
+      },
+      "deltas": {
+        "18707": -0.875,
+        "38915": 0.125,
+        "60923": -1.625,
+        "62315": -0.75,
+        "36845": 0.75
+      }
+    },
+    {
+      "index": 120,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 20.875,
+        "West": 26.25,
+        "South": 23.0,
+        "North": 28.5
+      },
+      "deltas": {
+        "18707": -3.75,
+        "38915": -0.625,
+        "60923": -1.75,
+        "62315": -0.625,
+        "36845": 0.75
+      }
+    },
+    {
+      "index": 121,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 30.75,
+        "West": 25.875,
+        "South": 33.0,
+        "North": 26.75
+      },
+      "deltas": {
+        "18707": -1.875,
+        "38915": -0.5,
+        "60923": -2.1875,
+        "62315": -0.9375,
+        "36845": 0.5
+      }
+    },
+    {
+      "index": 122,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 21.375,
+        "West": 26.5,
+        "South": 24.625,
+        "North": 25.875
+      },
+      "deltas": {
+        "18707": -4.875,
+        "38915": 0.375,
+        "60923": -2.0,
+        "62315": -0.25,
+        "36845": 0.5
+      }
+    },
+    {
+      "index": 123,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 27.125,
+        "West": 25.5,
+        "South": 30.375,
+        "North": 27.125
+      },
+      "deltas": {
+        "18707": -5.625,
+        "38915": -0.625,
+        "60923": -2.375,
+        "62315": -1.125,
+        "36845": 0.75
+      }
+    },
+    {
+      "index": 124,
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 27.25,
+        "West": 21.125,
+        "South": 27.875,
+        "North": 22.125
+      },
+      "deltas": {
+        "18707": -1.375,
+        "38915": 0.0,
+        "60923": -1.0,
+        "62315": -0.5,
+        "36845": 0.625
+      }
+    },
+    {
+      "index": 125,
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 27.75,
+        "West": 22.5,
+        "South": 29.625,
+        "North": 24.375
+      },
+      "deltas": {
+        "18707": -4.375,
+        "38915": -0.5,
+        "60923": -1.75,
+        "62315": -0.5,
+        "36845": 0.625
+      }
+    },
+    {
+      "index": 126,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 22.5,
+        "West": 25.25,
+        "South": 25.0,
+        "North": 24.25
+      },
+      "deltas": {
+        "18707": -5.375,
+        "38915": -0.125,
+        "60923": -2.25,
+        "62315": -1.375,
+        "36845": -0.125
+      }
+    },
+    {
+      "index": 127,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 23.625,
+        "West": 25.125,
+        "South": 28.125,
+        "North": 26.375
+      },
+      "deltas": {
+        "18707": -1.9375,
+        "38915": -0.5625,
+        "60923": -1.625,
+        "62315": -0.9375,
+        "36845": 0.6875
+      }
+    },
+    {
+      "index": 128,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 21.625,
+        "West": 22.25,
+        "South": 24.875,
+        "North": 20.125
+      },
+      "deltas": {
+        "18707": -2.5,
+        "38915": -0.25,
+        "60923": -1.25,
+        "62315": -0.25,
+        "36845": 0.875
+      }
+    },
+    {
+      "index": 129,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 24.5,
+        "West": 25.25,
+        "South": 25.625,
+        "North": 26.25
+      },
+      "deltas": {
+        "18707": -4.625,
+        "38915": 0.625,
+        "60923": -2.5,
+        "62315": -0.875,
+        "36845": 1.125
+      }
+    },
+    {
+      "index": 130,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 23.375,
+        "West": 22.875,
+        "South": 23.5,
+        "North": 24.375
+      },
+      "deltas": {
+        "18707": -4.5,
+        "38915": 0.375,
+        "60923": -1.75,
+        "62315": -0.625,
+        "36845": 1.5
+      }
+    },
+    {
+      "index": 131,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 26.0,
+        "West": 28.75,
+        "South": 27.5,
+        "North": 29.625
+      },
+      "deltas": {
+        "18707": -4.25,
+        "38915": -0.375,
+        "60923": -3.0,
+        "62315": -1.25,
+        "36845": -0.125
+      }
+    },
+    {
+      "index": 132,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 23.25,
+        "West": 23.75,
+        "South": 24.0,
+        "North": 25.375
+      },
+      "deltas": {
+        "18707": -8.8125,
+        "38915": -0.125,
+        "60923": -2.625,
+        "62315": -1.375,
+        "36845": 0.75
+      }
+    },
+    {
+      "index": 133,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 27.75,
+        "West": 25.625,
+        "South": 30.375,
+        "North": 26.875
+      },
+      "deltas": {
+        "18707": -4.0,
+        "38915": 0.375,
+        "60923": -2.0,
+        "62315": -0.25,
+        "36845": 1.5
+      }
+    },
+    {
+      "index": 134,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 25.0,
+        "West": 24.875,
+        "South": 26.875,
+        "North": 26.125
+      },
+      "deltas": {
+        "18707": -8.8125,
+        "38915": 0.0,
+        "60923": -3.375,
+        "62315": -1.375,
+        "36845": 0.875
+      }
+    },
+    {
+      "index": 135,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 30.375,
+        "West": 23.5,
+        "South": 33.5,
+        "North": 20.625
+      },
+      "deltas": {
+        "18707": -2.375,
+        "38915": -1.0,
+        "60923": -2.125,
+        "62315": -1.0,
+        "36845": 0.875
+      }
+    },
+    {
+      "index": 136,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 22.625,
+        "West": 24.0,
+        "South": 26.5,
+        "North": 21.75
+      },
+      "deltas": {
+        "18707": -4.75,
+        "38915": -0.875,
+        "60923": -2.0,
+        "62315": -1.125,
+        "36845": 0.0
+      }
+    },
+    {
+      "index": 137,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 23.0,
+        "West": 25.375,
+        "South": 30.5,
+        "North": 21.0
+      },
+      "deltas": {
+        "18707": -2.875,
+        "38915": -1.125,
+        "60923": -2.375,
+        "62315": -0.625,
+        "36845": 0.75
+      }
+    },
+    {
+      "index": 138,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 19.25,
+        "West": 22.5,
+        "South": 25.0,
+        "North": 18.5
+      },
+      "deltas": {
+        "18707": -3.8125,
+        "38915": -0.5,
+        "60923": -1.5,
+        "62315": -0.5,
+        "36845": 1.0
+      }
+    },
+    {
+      "index": 139,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 24.0,
+        "West": 23.375,
+        "South": 30.375,
+        "North": 20.375
+      },
+      "deltas": {
+        "18707": -3.6875,
+        "38915": -0.1875,
+        "60923": -2.75,
+        "62315": -0.6875,
+        "36845": 0.9375
+      }
+    },
+    {
+      "index": 140,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 25.875,
+        "West": 27.125,
+        "South": 29.0,
+        "North": 31.125
+      },
+      "deltas": {
+        "18707": -1.71875,
+        "38915": 0.1875,
+        "60923": -2.4375,
+        "62315": -0.9375,
+        "36845": 0.375
+      }
+    },
+    {
+      "index": 141,
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 25.625,
+        "West": 24.0,
+        "South": 26.625,
+        "North": 25.5
+      },
+      "deltas": {
+        "18707": -1.375,
+        "38915": 0.875,
+        "60923": -1.625,
+        "62315": 0.125,
+        "36845": 1.625
+      }
+    },
+    {
+      "index": 142,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 21.0,
+        "West": 23.625,
+        "South": 21.0,
+        "North": 25.875
+      },
+      "deltas": {
+        "18707": -6.1875,
+        "38915": -0.5,
+        "60923": -2.75,
+        "62315": -1.125,
+        "36845": 1.375
+      }
+    },
+    {
+      "index": 143,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 22.875,
+        "West": 23.25,
+        "South": 25.25,
+        "North": 24.625
+      },
+      "deltas": {
+        "18707": 0.375,
+        "38915": -0.25,
+        "60923": -1.125,
+        "62315": -0.375,
+        "36845": 0.375
+      }
+    },
+    {
+      "index": 144,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 22.75,
+        "West": 24.5,
+        "South": 27.125,
+        "North": 23.125
+      },
+      "deltas": {
+        "18707": -4.3125,
+        "38915": -0.5625,
+        "60923": -2.5,
+        "62315": -1.375,
+        "36845": 0.125
+      }
+    },
+    {
+      "index": 145,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 22.625,
+        "West": 25.125,
+        "South": 23.25,
+        "North": 27.75
+      },
+      "deltas": {
+        "18707": -6.0,
+        "38915": -0.625,
+        "60923": -3.25,
+        "62315": -2.0,
+        "36845": 0.5
+      }
+    },
+    {
+      "index": 146,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 25.375,
+        "West": 25.625,
+        "South": 25.125,
+        "North": 27.375
+      },
+      "deltas": {
+        "18707": -0.25,
+        "38915": 0.25,
+        "60923": -1.875,
+        "62315": -0.5,
+        "36845": 1.0
+      }
+    },
+    {
+      "index": 147,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 30.125,
+        "West": 27.5,
+        "South": 32.25,
+        "North": 27.25
+      },
+      "deltas": {
+        "18707": -7.25,
+        "38915": -1.0,
+        "60923": -3.375,
+        "62315": -1.5,
+        "36845": 0.375
+      }
+    },
+    {
+      "index": 148,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 28.625,
+        "West": 24.875,
+        "South": 31.375,
+        "North": 23.75
+      },
+      "deltas": {
+        "18707": -5.0625,
+        "38915": -0.75,
+        "60923": -4.25,
+        "62315": -1.125,
+        "36845": 0.5
+      }
+    },
+    {
+      "index": 149,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 23.75,
+        "West": 27.5,
+        "South": 26.0,
+        "North": 25.75
+      },
+      "deltas": {
+        "18707": 1.5,
+        "38915": 1.375,
+        "60923": -2.5,
+        "62315": -0.5,
+        "36845": 1.125
+      }
+    },
+    {
+      "index": 150,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 26.25,
+        "West": 25.375,
+        "South": 32.75,
+        "North": 24.0
+      },
+      "deltas": {
+        "18707": -3.5,
+        "38915": -1.125,
+        "60923": -2.625,
+        "62315": -0.75,
+        "36845": 0.625
+      }
+    },
+    {
+      "index": 151,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 25.0,
+        "West": 24.0,
+        "South": 28.875,
+        "North": 23.0
+      },
+      "deltas": {
+        "18707": -8.125,
+        "38915": -0.75,
+        "60923": -2.75,
+        "62315": -0.5,
+        "36845": 1.0
+      }
+    },
+    {
+      "index": 152,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 19.5,
+        "West": 24.625,
+        "South": 19.75,
+        "North": 28.75
+      },
+      "deltas": {
+        "18707": -2.8125,
+        "38915": -0.25,
+        "60923": -2.0,
+        "62315": -0.8125,
+        "36845": 0.875
+      }
+    },
+    {
+      "index": 153,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 21.125,
+        "West": 25.125,
+        "South": 22.125,
+        "North": 27.375
+      },
+      "deltas": {
+        "18707": -6.25,
+        "38915": -0.25,
+        "60923": -1.875,
+        "62315": -1.0,
+        "36845": 0.875
+      }
+    },
+    {
+      "index": 154,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 24.875,
+        "West": 25.625,
+        "South": 26.75,
+        "North": 28.375
+      },
+      "deltas": {
+        "18707": -5.4375,
+        "38915": -0.5,
+        "60923": -2.375,
+        "62315": -2.0,
+        "36845": 0.0
+      }
+    },
+    {
+      "index": 155,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 23.625,
+        "West": 25.25,
+        "South": 24.75,
+        "North": 28.375
+      },
+      "deltas": {
+        "18707": -5.75,
+        "38915": -0.375,
+        "60923": -3.5,
+        "62315": -1.375,
+        "36845": 0.375
+      }
+    },
+    {
+      "index": 156,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 24.125,
+        "West": 23.75,
+        "South": 26.375,
+        "North": 23.5
+      },
+      "deltas": {
+        "18707": 1.0,
+        "38915": 0.0,
+        "60923": -1.25,
+        "62315": -0.625,
+        "36845": 0.75
+      }
+    },
+    {
+      "index": 157,
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 24.5,
+        "West": 21.5,
+        "South": 26.125,
+        "North": 24.0
+      },
+      "deltas": {
+        "18707": 2.625,
+        "38915": 0.0,
+        "60923": -1.875,
+        "62315": -0.375,
+        "36845": 0.75
+      }
+    },
+    {
+      "index": 158,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 21.625,
+        "West": 25.125,
+        "South": 23.75,
+        "North": 24.5
+      },
+      "deltas": {
+        "18707": 0.0,
+        "38915": 1.0,
+        "60923": -1.5,
+        "62315": 0.125,
+        "36845": 1.375
+      }
+    },
+    {
+      "index": 159,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 24.5,
+        "West": 24.625,
+        "South": 27.25,
+        "North": 24.5
+      },
+      "deltas": {
+        "18707": -6.1875,
+        "38915": -1.375,
+        "60923": -3.1875,
+        "62315": -1.6875,
+        "36845": -0.125
+      }
+    },
+    {
+      "index": 160,
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 26.375,
+        "West": 25.375,
+        "South": 25.75,
+        "North": 26.75
+      },
+      "deltas": {
+        "18707": -7.5,
+        "38915": 0.0,
+        "60923": -3.625,
+        "62315": -1.375,
+        "36845": 0.625
+      }
+    },
+    {
+      "index": 161,
+      "pred_dir_clean": "East",
+      "clean_direction_logits": {
+        "East": 24.375,
+        "West": 21.75,
+        "South": 25.25,
+        "North": 23.75
+      },
+      "deltas": {
+        "18707": 4.625,
+        "38915": 0.5,
+        "60923": -1.375,
+        "62315": -0.375,
+        "36845": 0.625
+      }
+    },
+    {
+      "index": 162,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 25.375,
+        "West": 25.375,
+        "South": 25.625,
+        "North": 28.0
+      },
+      "deltas": {
+        "18707": -4.1875,
+        "38915": -0.5,
+        "60923": -2.8125,
+        "62315": -1.8125,
+        "36845": 0.0
+      }
+    },
+    {
+      "index": 163,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 24.75,
+        "West": 24.5,
+        "South": 25.375,
+        "North": 26.125
+      },
+      "deltas": {
+        "18707": -4.5,
+        "38915": 0.375,
+        "60923": -2.0,
+        "62315": -0.875,
+        "36845": 1.5
+      }
+    },
+    {
+      "index": 164,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 23.25,
+        "West": 23.25,
+        "South": 24.125,
+        "North": 24.375
+      },
+      "deltas": {
+        "18707": -0.125,
+        "38915": -0.125,
+        "60923": -1.375,
+        "62315": -0.75,
+        "36845": 0.625
+      }
+    },
+    {
+      "index": 165,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 24.0,
+        "West": 23.875,
+        "South": 27.25,
+        "North": 24.875
+      },
+      "deltas": {
+        "18707": -5.6875,
+        "38915": -0.375,
+        "60923": -1.5,
+        "62315": -1.125,
+        "36845": 0.5
+      }
+    },
+    {
+      "index": 166,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 24.0,
+        "West": 23.75,
+        "South": 25.875,
+        "North": 25.0
+      },
+      "deltas": {
+        "18707": -3.875,
+        "38915": 0.125,
+        "60923": -2.25,
+        "62315": -0.5,
+        "36845": 1.125
+      }
+    },
+    {
+      "index": 167,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 25.0,
+        "West": 29.25,
+        "South": 27.875,
+        "North": 30.125
+      },
+      "deltas": {
+        "18707": -1.625,
+        "38915": 0.0,
+        "60923": -1.0,
+        "62315": -0.375,
+        "36845": 1.0
+      }
+    },
+    {
+      "index": 168,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 23.25,
+        "West": 22.5,
+        "South": 25.5,
+        "North": 23.5
+      },
+      "deltas": {
+        "18707": -3.25,
+        "38915": -0.25,
+        "60923": -1.125,
+        "62315": -0.25,
+        "36845": 1.125
+      }
+    },
+    {
+      "index": 169,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 23.375,
+        "West": 25.5,
+        "South": 27.75,
+        "North": 30.5
+      },
+      "deltas": {
+        "18707": -3.375,
+        "38915": 0.25,
+        "60923": -1.625,
+        "62315": -0.875,
+        "36845": 0.75
+      }
+    },
+    {
+      "index": 170,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 22.0,
+        "West": 22.5,
+        "South": 23.375,
+        "North": 24.375
+      },
+      "deltas": {
+        "18707": -5.625,
+        "38915": -0.125,
+        "60923": -2.5,
+        "62315": -0.125,
+        "36845": 1.25
+      }
+    },
+    {
+      "index": 171,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 25.5,
+        "West": 26.0,
+        "South": 26.5,
+        "North": 27.125
+      },
+      "deltas": {
+        "18707": -4.9375,
+        "38915": 0.25,
+        "60923": -1.25,
+        "62315": -0.625,
+        "36845": 1.25
+      }
+    },
+    {
+      "index": 172,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 27.25,
+        "West": 26.75,
+        "South": 27.75,
+        "North": 30.75
+      },
+      "deltas": {
+        "18707": -3.25,
+        "38915": -0.4375,
+        "60923": -2.1875,
+        "62315": -1.5625,
+        "36845": -0.0625
+      }
+    },
+    {
+      "index": 173,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 25.875,
+        "West": 22.875,
+        "South": 28.875,
+        "North": 25.25
+      },
+      "deltas": {
+        "18707": -3.3125,
+        "38915": -0.8125,
+        "60923": -2.1875,
+        "62315": -1.375,
+        "36845": -0.1875
+      }
+    },
+    {
+      "index": 174,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 26.625,
+        "West": 26.375,
+        "South": 27.375,
+        "North": 27.875
+      },
+      "deltas": {
+        "18707": -8.5625,
+        "38915": -0.5,
+        "60923": -3.125,
+        "62315": -1.75,
+        "36845": 0.125
+      }
+    },
+    {
+      "index": 175,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 25.25,
+        "West": 26.375,
+        "South": 25.625,
+        "North": 27.875
+      },
+      "deltas": {
+        "18707": -6.25,
+        "38915": -0.625,
+        "60923": -2.5,
+        "62315": -2.25,
+        "36845": -0.25
+      }
+    },
+    {
+      "index": 176,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 23.875,
+        "West": 23.875,
+        "South": 24.875,
+        "North": 25.0
+      },
+      "deltas": {
+        "18707": -8.0625,
+        "38915": -0.375,
+        "60923": -2.625,
+        "62315": -1.5,
+        "36845": 0.0
+      }
+    },
+    {
+      "index": 177,
+      "pred_dir_clean": "West",
+      "clean_direction_logits": {
+        "East": 23.625,
+        "West": 24.25,
+        "South": 25.375,
+        "North": 25.875
+      },
+      "deltas": {
+        "18707": 0.875,
+        "38915": 0.25,
+        "60923": -1.875,
+        "62315": -0.5,
+        "36845": 0.375
+      }
+    },
+    {
+      "index": 178,
+      "pred_dir_clean": "South",
+      "clean_direction_logits": {
+        "East": 26.25,
+        "West": 26.25,
+        "South": 29.75,
+        "North": 26.5
+      },
+      "deltas": {
+        "18707": -6.25,
+        "38915": -1.125,
+        "60923": -3.0,
+        "62315": -1.5,
+        "36845": -0.125
+      }
+    },
+    {
+      "index": 179,
+      "pred_dir_clean": "North",
+      "clean_direction_logits": {
+        "East": 23.375,
+        "West": 23.625,
+        "South": 24.125,
+        "North": 25.125
+      },
+      "deltas": {
+        "18707": -7.0,
+        "38915": -0.625,
+        "60923": -2.25,
+        "62315": -1.25,
+        "36845": -0.125
+      }
+    }
+  ]
+}

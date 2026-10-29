@@ -1,0 +1,295 @@
+{
+  "significant_features": [
+    {
+      "feature_id": 37159,
+      "morans_i": 0.5788651915877236,
+      "p_value": 0.001,
+      "p_adj": 0.012615384615384615,
+      "hotspot_cities": [
+        "Kashgar",
+        "Artux",
+        "Ürümqi",
+        "Turpan",
+        "Tacheng",
+        "Korla",
+        "Karamay",
+        "Ghulja",
+        "Changji",
+        "Aqsu",
+        "Tumxuk"
+      ]
+    },
+    {
+      "feature_id": 58833,
+      "morans_i": 0.5212991971580079,
+      "p_value": 0.001,
+      "p_adj": 0.012615384615384615,
+      "hotspot_cities": [
+        "Weihai",
+        "Shijiazhuang",
+        "Qinhuangdao",
+        "Yingkou",
+        "Tongliao",
+        "Tonghua",
+        "Suihua",
+        "Shenyang",
+        "Huludao",
+        "Hohhot",
+        "Harbin",
+        "Fushun",
+        "Daqing",
+        "Chifeng",
+        "Chaoyang",
+        "Baicheng",
+        "Xilinhot",
+        "Ulanqab",
+        "Hulunbuir"
+      ]
+    },
+    {
+      "feature_id": 43181,
+      "morans_i": 0.429158366229315,
+      "p_value": 0.001,
+      "p_adj": 0.012615384615384615,
+      "hotspot_cities": [
+        "Yichun",
+        "Xinyu",
+        "Guang’an",
+        "Nanping",
+        "Jinhua",
+        "Ningde",
+        "Ji’an",
+        "Hangzhou",
+        "Fuzhou"
+      ]
+    },
+    {
+      "feature_id": 425,
+      "morans_i": 0.40707389214247364,
+      "p_value": 0.001,
+      "p_adj": 0.012615384615384615,
+      "hotspot_cities": [
+        "Rikaze",
+        "Qamdo",
+        "Nagqu",
+        "Lhasa",
+        "Yushu",
+        "Lhoka",
+        "Nyingchi",
+        "Lhünzhub"
+      ]
+    },
+    {
+      "feature_id": 56981,
+      "morans_i": 0.324920239448076,
+      "p_value": 0.001,
+      "p_adj": 0.012615384615384615,
+      "hotspot_cities": [
+        "Zhaoqing",
+        "Zhangzhou",
+        "Zhuhai",
+        "Wuxi",
+        "Shenzhen",
+        "Shanwei",
+        "Jieyang",
+        "Qingyuan",
+        "Ningbo",
+        "Nantong",
+        "Meizhou",
+        "Longyan",
+        "Lishui",
+        "Jinhua",
+        "Jiaxing",
+        "Jiangmen",
+        "Huzhou",
+        "Huizhou",
+        "Hangzhou",
+        "Guangzhou",
+        "Foshan",
+        "Dongguan",
+        "Changzhou",
+        "Suzhou",
+        "Zhongshan",
+        "Taizhou"
+      ]
+    },
+    {
+      "feature_id": 45671,
+      "morans_i": 0.3044026799588798,
+      "p_value": 0.001,
+      "p_adj": 0.012615384615384615,
+      "hotspot_cities": [
+        "Zhangzhou",
+        "Xiamen",
+        "Weihai",
+        "Shantou",
+        "Quanzhou",
+        "Qingdao",
+        "Putian",
+        "Meizhou",
+        "Longyan",
+        "Fuzhou",
+        "Chaozhou"
+      ]
+    },
+    {
+      "feature_id": 58472,
+      "morans_i": 0.2336974658656996,
+      "p_value": 0.001,
+      "p_adj": 0.012615384615384615,
+      "hotspot_cities": [
+        "Guang’an",
+        "Nanchong",
+        "Meishan",
+        "Luzhou",
+        "Guangyuan",
+        "Deyang",
+        "Dazhou",
+        "Chengdu"
+      ]
+    },
+    {
+      "feature_id": 13664,
+      "morans_i": 0.20902558957213832,
+      "p_value": 0.001,
+      "p_adj": 0.012615384615384615,
+      "hotspot_cities": [
+        "Yichang",
+        "Shiyan",
+        "Jingmen"
+      ]
+    },
+    {
+      "feature_id": 8964,
+      "morans_i": 0.1837443630814067,
+      "p_value": 0.001,
+      "p_adj": 0.012615384615384615,
+      "hotspot_cities": [
+        "Weihai"
+      ]
+    },
+    {
+      "feature_id": 38144,
+      "morans_i": 0.1555354043523519,
+      "p_value": 0.001,
+      "p_adj": 0.012615384615384615,
+      "hotspot_cities": [
+        "Ningbo",
+        "Nantong",
+        "Jiaxing",
+        "Suzhou"
+      ]
+    },
+    {
+      "feature_id": 1665,
+      "morans_i": 0.14330142005903054,
+      "p_value": 0.001,
+      "p_adj": 0.012615384615384615,
+      "hotspot_cities": [
+        "Zhanjiang",
+        "Qinzhou",
+        "Beihai",
+        "Chongzuo",
+        "Fangchenggang"
+      ]
+    },
+    {
+      "feature_id": 21483,
+      "morans_i": 0.1157820701548821,
+      "p_value": 0.003,
+      "p_adj": 0.027333333333333334,
+      "hotspot_cities": [
+        "Huaibei",
+        "Xuzhou"
+      ]
+    },
+    {
+      "feature_id": 9302,
+      "morans_i": 0.11392179665609244,
+      "p_value": 0.001,
+      "p_adj": 0.012615384615384615,
+      "hotspot_cities": [
+        "Zhangzhou",
+        "Xiamen"
+      ]
+    },
+    {
+      "feature_id": 57830,
+      "morans_i": 0.10499199001350387,
+      "p_value": 0.002,
+      "p_adj": 0.019294117647058823,
+      "hotspot_cities": [
+        "Qamdo",
+        "Yushu",
+        "Anshun"
+      ]
+    },
+    {
+      "feature_id": 23310,
+      "morans_i": 0.10410512612860395,
+      "p_value": 0.001,
+      "p_adj": 0.012615384615384615,
+      "hotspot_cities": [
+        "Nanchong",
+        "Guangyuan"
+      ]
+    },
+    {
+      "feature_id": 34353,
+      "morans_i": 0.10140381220261886,
+      "p_value": 0.002,
+      "p_adj": 0.019294117647058823,
+      "hotspot_cities": [
+        "Xichang",
+        "Shangri-La"
+      ]
+    },
+    {
+      "feature_id": 39778,
+      "morans_i": 0.09961244638897121,
+      "p_value": 0.002,
+      "p_adj": 0.019294117647058823,
+      "hotspot_cities": [
+        "Ürümqi",
+        "Turpan",
+        "Changji",
+        "Hulunbuir"
+      ]
+    },
+    {
+      "feature_id": 17719,
+      "morans_i": 0.09440691728234626,
+      "p_value": 0.004,
+      "p_adj": 0.03452631578947368,
+      "hotspot_cities": []
+    },
+    {
+      "feature_id": 44266,
+      "morans_i": 0.09400777994615946,
+      "p_value": 0.002,
+      "p_adj": 0.019294117647058823,
+      "hotspot_cities": [
+        "Liaocheng",
+        "Hengshui",
+        "Dezhou",
+        "Bozhou"
+      ]
+    },
+    {
+      "feature_id": 22560,
+      "morans_i": 0.08706152607906603,
+      "p_value": 0.006,
+      "p_adj": 0.046857142857142854,
+      "hotspot_cities": []
+    },
+    {
+      "feature_id": 44842,
+      "morans_i": 0.06966014238702939,
+      "p_value": 0.005,
+      "p_adj": 0.041,
+      "hotspot_cities": []
+    }
+  ],
+  "total_significant": 21,
+  "total_nontrivial": 164
+}

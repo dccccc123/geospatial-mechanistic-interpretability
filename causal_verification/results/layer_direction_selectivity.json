@@ -1,0 +1,153 @@
+{
+  "experiment": "layer_direction_selectivity",
+  "model_name": "Qwen/Qwen3-8B",
+  "summary": {
+    "n_prompts": 180,
+    "per_layer": {
+      "0": {
+        "median_selectivity": 0.11795620620250702,
+        "logit_lens_accuracy": 0.15555555555555556
+      },
+      "1": {
+        "median_selectivity": 0.19294670224189758,
+        "logit_lens_accuracy": 0.15555555555555556
+      },
+      "2": {
+        "median_selectivity": 0.10951028764247894,
+        "logit_lens_accuracy": 0.15555555555555556
+      },
+      "3": {
+        "median_selectivity": 0.06302137672901154,
+        "logit_lens_accuracy": 0.15555555555555556
+      },
+      "4": {
+        "median_selectivity": 0.06430144608020782,
+        "logit_lens_accuracy": 0.15555555555555556
+      },
+      "5": {
+        "median_selectivity": 0.3017891049385071,
+        "logit_lens_accuracy": 0.15555555555555556
+      },
+      "6": {
+        "median_selectivity": 0.3052977919578552,
+        "logit_lens_accuracy": 0.16111111111111112
+      },
+      "7": {
+        "median_selectivity": 0.4228501319885254,
+        "logit_lens_accuracy": 0.26666666666666666
+      },
+      "8": {
+        "median_selectivity": 1.2525960206985474,
+        "logit_lens_accuracy": 0.15555555555555556
+      },
+      "9": {
+        "median_selectivity": 0.32337427139282227,
+        "logit_lens_accuracy": 0.2111111111111111
+      },
+      "10": {
+        "median_selectivity": 1.2510037422180176,
+        "logit_lens_accuracy": 0.2833333333333333
+      },
+      "11": {
+        "median_selectivity": 0.2902953624725342,
+        "logit_lens_accuracy": 0.15
+      },
+      "12": {
+        "median_selectivity": 0.3696258068084717,
+        "logit_lens_accuracy": 0.37222222222222223
+      },
+      "13": {
+        "median_selectivity": 0.20022010803222656,
+        "logit_lens_accuracy": 0.3611111111111111
+      },
+      "14": {
+        "median_selectivity": 0.18139219284057617,
+        "logit_lens_accuracy": 0.3611111111111111
+      },
+      "15": {
+        "median_selectivity": 0.3128349781036377,
+        "logit_lens_accuracy": 0.34444444444444444
+      },
+      "16": {
+        "median_selectivity": 0.37506651878356934,
+        "logit_lens_accuracy": 0.36666666666666664
+      },
+      "17": {
+        "median_selectivity": 0.24716949462890625,
+        "logit_lens_accuracy": 0.36666666666666664
+      },
+      "18": {
+        "median_selectivity": 0.3915901184082031,
+        "logit_lens_accuracy": 0.36666666666666664
+      },
+      "19": {
+        "median_selectivity": 1.2358918190002441,
+        "logit_lens_accuracy": 0.2722222222222222
+      },
+      "20": {
+        "median_selectivity": 1.5292057991027832,
+        "logit_lens_accuracy": 0.35
+      },
+      "21": {
+        "median_selectivity": 1.5673236846923828,
+        "logit_lens_accuracy": 0.31666666666666665
+      },
+      "22": {
+        "median_selectivity": 2.1888742446899414,
+        "logit_lens_accuracy": 0.22777777777777777
+      },
+      "23": {
+        "median_selectivity": 0.8082342147827148,
+        "logit_lens_accuracy": 0.35
+      },
+      "24": {
+        "median_selectivity": 0.8392295837402344,
+        "logit_lens_accuracy": 0.32222222222222224
+      },
+      "25": {
+        "median_selectivity": 1.2060432434082031,
+        "logit_lens_accuracy": 0.36666666666666664
+      },
+      "26": {
+        "median_selectivity": 2.5226364135742188,
+        "logit_lens_accuracy": 0.6055555555555555
+      },
+      "27": {
+        "median_selectivity": 3.0752201080322266,
+        "logit_lens_accuracy": 0.65
+      },
+      "28": {
+        "median_selectivity": 3.7203292846679688,
+        "logit_lens_accuracy": 0.6555555555555556
+      },
+      "29": {
+        "median_selectivity": 4.331905364990234,
+        "logit_lens_accuracy": 0.6722222222222223
+      },
+      "30": {
+        "median_selectivity": 9.057174682617188,
+        "logit_lens_accuracy": 0.6222222222222222
+      },
+      "31": {
+        "median_selectivity": 10.270553588867188,
+        "logit_lens_accuracy": 0.6722222222222223
+      },
+      "32": {
+        "median_selectivity": 8.594306945800781,
+        "logit_lens_accuracy": 0.6944444444444444
+      },
+      "33": {
+        "median_selectivity": 10.800567626953125,
+        "logit_lens_accuracy": 0.6888888888888889
+      },
+      "34": {
+        "median_selectivity": 18.328575134277344,
+        "logit_lens_accuracy": 0.75
+      },
+      "35": {
+        "median_selectivity": 14.050262451171875,
+        "logit_lens_accuracy": 0.7722222222222223
+      }
+    }
+  }
+}
