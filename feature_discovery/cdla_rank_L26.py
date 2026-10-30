@@ -47,10 +47,10 @@ def compute_or_load_the_sae_acts():
         print(f"[Cache] stale cache ({acts.shape[0]} < {n_rows}); regenerating.")
 
     print("[Cache] computing L26 the SAE activations (forward + encode) ...")
-    tokenizer = AutoTokenizer.from_pretrained(MODEL, trust_remote_code=True, local_files_only=True)
+    tokenizer = AutoTokenizer.from_pretrained(MODEL, trust_remote_code=True)
     model = AutoModelForCausalLM.from_pretrained(
         MODEL, dtype=torch.bfloat16, device_map="cuda",
-        trust_remote_code=True, local_files_only=True,
+        trust_remote_code=True,
     )
     model.eval()
     sae = SAE.load_from_disk(str(SAE_DIR), device="cuda")
@@ -104,7 +104,7 @@ def main():
     W_dec = raw.get("sae.W_dec", raw.get("W_dec")).float()     # [d_sae, d_model]
 
     model = AutoModelForCausalLM.from_pretrained(MODEL, dtype=torch.bfloat16, device_map="cpu",
-                                                 trust_remote_code=True, local_files_only=True)
+                                                 trust_remote_code=True)
     W_U = model.get_output_embeddings().weight.detach().float()  # [vocab, d_model]
     u = {d: W_U[DIR_TOK[d]] for d in DIRS}
     del model

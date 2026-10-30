@@ -282,7 +282,6 @@ class GeoCorpusBuilder:
             self._tokenizer = AutoTokenizer.from_pretrained(
                 config.model_name,
                 trust_remote_code=True,
-                local_files_only=True,
             )
 
     # ──────────────────────────── text generation ─────────────────────────────

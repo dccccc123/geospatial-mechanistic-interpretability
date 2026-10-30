@@ -49,7 +49,7 @@ def main():
     print("[Model] Loading lm_head (CPU)...")
     model = AutoModelForCausalLM.from_pretrained(
         "Qwen/Qwen3-8B", dtype=torch.bfloat16, device_map="cpu",
-        trust_remote_code=True, local_files_only=True,
+        trust_remote_code=True,
     )
     W_U = model.get_output_embeddings().weight.detach().float()
     del model

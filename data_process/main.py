@@ -68,7 +68,7 @@ def load_and_clean_data(file_path: Path) -> pd.DataFrame:
 
 def filter_by_token_length(df: pd.DataFrame, model_name: str = "Qwen/Qwen3-8B") -> pd.DataFrame:
 	"""Filter names by tokenizer length; fall back to length-2 if <1000 single-token names."""
-	tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True, local_files_only=True)
+	tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
 	names = df["name"].astype(str).tolist()
 
 	encoded = tokenizer(names, add_special_tokens=False, padding=False, truncation=False)

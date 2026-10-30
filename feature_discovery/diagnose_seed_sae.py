@@ -139,7 +139,7 @@ def load_model_and_saes(new_sae: Path, orig_sae: Path):
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
     model = AutoModelForCausalLM.from_pretrained(
         MODEL_NAME, dtype=torch.bfloat16, device_map="cuda",
-        trust_remote_code=True, local_files_only=True,
+        trust_remote_code=True,
     )
     model.eval()
     sae_new = SAE.load_from_disk(str(new_sae), device="cuda")

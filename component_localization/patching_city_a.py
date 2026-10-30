@@ -33,13 +33,12 @@ from tqdm.auto import tqdm
 
 
 def load_model(model_name: str) -> HookedTransformer:
-    tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True, local_files_only=True)
+    tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
     hf_model = AutoModelForCausalLM.from_pretrained(
         model_name,
         dtype=torch.bfloat16,
         device_map="cuda",
         trust_remote_code=True,
-        local_files_only=True,
     )
     model = HookedTransformer.from_pretrained(
         model_name,
@@ -48,7 +47,6 @@ def load_model(model_name: str) -> HookedTransformer:
         device="cuda",
         dtype=torch.bfloat16,
         trust_remote_code=True,
-        local_files_only=True,
         fold_ln=False,
         center_writing_weights=False,
         center_unembed=False,

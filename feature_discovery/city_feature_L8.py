@@ -97,14 +97,12 @@ def load_qwen_model(model_name: str) -> Tuple[HookedTransformer, AutoTokenizer]:
     tokenizer = AutoTokenizer.from_pretrained(
         model_name,
         trust_remote_code=True,
-        local_files_only=True,
     )
     hf_model = AutoModelForCausalLM.from_pretrained(
         model_name,
         torch_dtype=torch.bfloat16,
         device_map="cuda",
         trust_remote_code=True,
-        local_files_only=True,
     )
     model = HookedTransformer.from_pretrained(
         model_name,
@@ -113,7 +111,6 @@ def load_qwen_model(model_name: str) -> Tuple[HookedTransformer, AutoTokenizer]:
         device="cuda",
         dtype=torch.bfloat16,
         trust_remote_code=True,
-        local_files_only=True,
         fold_ln=False,
         center_writing_weights=False,
         center_unembed=False,
