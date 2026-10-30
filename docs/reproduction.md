@@ -12,6 +12,36 @@ This guide explains how to reproduce the main results of the paper, following th
    - `sae/final_sae/layer_8/sae_weights.safetensors` and `cfg.json`
    - `sae/final_sae/layer_26/sae_weights.safetensors` and `cfg.json`
 
+## Raw input data
+
+Rebuilding the datasets from scratch requires two raw input files:
+
+| File | Size | Source / license | Placement |
+|---|---|---|---|
+| `cities15000.txt` | 7.5 MB | GeoNames, CC BY 4.0 | `data_process/row_data/cities15000.txt` |
+| `wikitext_103.txt` | 502 MB | WikiText-103, CC BY-SA 3.0 | `data_process/dataset/wikitext_103.txt` |
+
+**`cities15000.txt`** — GeoNames cities15000 dump (19-column TSV). Download `cities15000.zip`
+from <https://download.geonames.org/export/dump/cities15000.zip> and extract it to
+`data_process/row_data/cities15000.txt`.
+
+**`wikitext_103.txt`** — space-tokenized WikiText-103 training split (paragraphs longer
+than 50 chars, one per line). Run:
+
+```bash
+python data_process/download_wikitext.py
+```
+
+This downloads `Salesforce/wikitext` (`wikitext-103-v1`, train split) from Hugging Face
+and writes the filtered paragraphs to `data_process/dataset/wikitext_103.txt`. The file
+is ~502 MB and is therefore downloaded at reproduction time rather than tracked in git.
+
+Integrity (SHA-256):
+- `cities15000.txt`: `e54c8bb876e07a590dfdee92da90ea09a83f0101ef8b527a552422d23d46a0f3`
+- `wikitext_103.txt`: `56932437482b76b82d9bdf7c41ae06dbb2caf67b6095178388a241707fa441c3`
+
+Verify with `sha256sum <file>` (Linux/macOS) or `certutil -hashfile <file> SHA256` (Windows).
+
 ## Dataset
 
 The discovery set (`data_process/dataset/balanced_city_pairs.jsonl`, 180 directed prompts) and the city-disjoint held-out set (`data_process/dataset/holdout_city_pairs.jsonl`) are included in this repository. They can be rebuilt from GeoNames with `data_process/main.py` and `data_process/build_holdout.py`.
