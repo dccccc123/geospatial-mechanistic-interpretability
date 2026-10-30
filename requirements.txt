@@ -3,7 +3,7 @@
 #   pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cu126
 torch==2.6.0
 transformers==4.57.1
-accelerate
+accelerate==1.11.0
 sae-lens==6.39.0
 transformer-lens==2.17.0
 
@@ -15,20 +15,17 @@ sentencepiece==0.2.1
 numpy==1.26.4
 scipy==1.15.2
 pandas==2.3.2
-scikit-learn
-
+scikit-learn==1.6.1
 # ===== Spatial autocorrelation (Moran's I and LISA) =====
-esda
-libpysal
-geopandas
-
+esda==2.7.0
+libpysal==4.12.1
+geopandas==1.0.1
 # ===== Plotting =====
 matplotlib==3.10.7
-seaborn
-adjustText
-
+seaborn==0.13.2
+adjustText==1.3.0
 # ===== Utilities =====
 safetensors==0.6.2
-tqdm
+tqdm==4.67.1
 einops==0.8.1
 wandb==0.25.1
