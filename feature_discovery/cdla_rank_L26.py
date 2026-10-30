@@ -8,13 +8,15 @@ For each direction this reports the top-1 / top-2 feature ids and their cDLA gap
 then bootstraps the direction's prompts (with replacement) to estimate the
 stability of the top-1 ranking.
 """
-import os, json
+import os, json, gc
 os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
 from pathlib import Path
 import numpy as np
 import torch
 from safetensors.torch import load_file
-from transformers import AutoModelForCausalLM
+from tqdm import tqdm
+from transformers import AutoModelForCausalLM, AutoTokenizer
+from sae_lens import SAE
 
 ROOT = Path(__file__).resolve().parent.parent
 SAE_DIR = ROOT / "sae" / "final_sae" / "layer_26"
@@ -22,6 +24,10 @@ THE_ACTS = ROOT / "sae" / "activations" / "the_sae_acts_l26.npy"
 PAIRS = ROOT / "data_process" / "dataset" / "balanced_city_pairs.jsonl"
 OUT = ROOT / "feature_discovery" / "results" / "cdla_rank_stability.json"
 MODEL = "Qwen/Qwen3-8B"
+PROMPT_TPL = "Relative to {city_a}, {city_b} is to the"
+THE_TOKEN_ID = 279
+TARGET_LAYER = 26
+OUTLIER_DIMS = [2276, 233]
 DIR_TOK = {"East": 10984, "West": 9710, "South": 9806, "North": 10200}
 DIRS = ["East", "West", "South", "North"]
 EXPECT = {"North": 26800, "South": 10801, "West": 56725, "East": 47636}
@@ -30,8 +36,67 @@ B_BOOT = 1000
 SEED = 42
 
 
+def compute_or_load_the_sae_acts():
+    """Load cached L26 the-position SAE activations [N, d_sae]; generate if missing."""
+    if THE_ACTS.exists():
+        acts = np.load(str(THE_ACTS))
+        n_rows = sum(1 for l in open(PAIRS) if l.strip())
+        if acts.shape[0] >= n_rows:
+            print(f"[Cache] loading L26 the SAE activations: {THE_ACTS}, shape={acts.shape}")
+            return acts.astype(np.float32)
+        print(f"[Cache] stale cache ({acts.shape[0]} < {n_rows}); regenerating.")
+
+    print("[Cache] computing L26 the SAE activations (forward + encode) ...")
+    tokenizer = AutoTokenizer.from_pretrained(MODEL, trust_remote_code=True, local_files_only=True)
+    model = AutoModelForCausalLM.from_pretrained(
+        MODEL, dtype=torch.bfloat16, device_map="cuda",
+        trust_remote_code=True, local_files_only=True,
+    )
+    model.eval()
+    sae = SAE.load_from_disk(str(SAE_DIR), device="cuda")
+    sae.eval()
+
+    rows = [json.loads(l) for l in open(PAIRS) if l.strip()]
+    all_acts = []
+    for row in tqdm(rows, desc="[extract L26 the SAE acts]", unit="prompt"):
+        prompt = PROMPT_TPL.format(city_a=row["City_A"], city_b=row["City_B"])
+        inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+        positions = (inputs.input_ids[0] == THE_TOKEN_ID).nonzero(as_tuple=True)[0]
+        if len(positions) == 0:
+            raise RuntimeError(f"THE_TOKEN_ID={THE_TOKEN_ID} not found in prompt: {prompt}")
+        the_pos = int(positions[-1].item())
+        captured = {}
+
+        def hook(_m, _i, output):
+            hidden = output[0].clone() if isinstance(output, tuple) else output.clone()
+            hidden[:, :, OUTLIER_DIMS] = 0.0
+            captured["h"] = hidden[:, the_pos, :].detach()
+            return None
+
+        handle = model.model.layers[TARGET_LAYER].register_forward_hook(hook)
+        try:
+            with torch.inference_mode():
+                model(**inputs)
+        finally:
+            handle.remove()
+
+        with torch.inference_mode():
+            feats = sae.encode(captured["h"].to(device="cuda", dtype=torch.bfloat16))
+        all_acts.append(feats.squeeze(0).detach().float().cpu().numpy())
+
+    acts = np.stack(all_acts, axis=0).astype(np.float32)
+    THE_ACTS.parent.mkdir(parents=True, exist_ok=True)
+    np.save(str(THE_ACTS), acts)
+    print(f"[Cache] saved L26 the SAE activations: {THE_ACTS}, shape={acts.shape}")
+
+    del model, sae
+    gc.collect()
+    torch.cuda.empty_cache()
+    return acts
+
+
 def main():
-    acts = np.load(THE_ACTS)                                   # [180, 65536]
+    acts = compute_or_load_the_sae_acts()                      # [180, 65536]
     dirs = [json.loads(l)["Direction"] for l in open(PAIRS) if l.strip()]
     dir_idx = {d: [i for i, x in enumerate(dirs) if x == d] for d in DIRS}
 

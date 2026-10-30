@@ -41,7 +41,7 @@
   ],
   "n_prompts": 180,
   "metric": "delta_logit = logit_after(d_pred) - logit_before(d_pred)",
-  "prediction_rule": "d_pred is the max logit among East, West, South, North in clean forward",
+  "prediction_rule": "axis-based rule: pick the axis (E-W or N-S) with larger |logit diff|, then the direction with the positive diff",
   "control_summary": {
     "median_delta": 0.0,
     "mean_delta": -0.01826388888888889,

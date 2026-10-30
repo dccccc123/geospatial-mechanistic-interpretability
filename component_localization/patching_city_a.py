@@ -182,9 +182,9 @@ def main() -> None:
     parser.add_argument("--batch-size", type=int, default=16)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--save-results-npz", type=str,
-                        default="spatial_computation_neurons/patching_results_cityA.npz")
+                        default="component_localization/patching_results_cityA.npz")
     parser.add_argument("--save-results-meta", type=str,
-                        default="spatial_computation_neurons/patching_results_cityA_meta.json")
+                        default="component_localization/patching_results_cityA_meta.json")
     args = parser.parse_args()
 
     random.seed(args.seed)

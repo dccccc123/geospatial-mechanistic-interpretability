@@ -587,7 +587,7 @@ def main() -> None:
     parser.add_argument(
         "--save-results",
         type=str,
-        default="spatial_computation_neurons/path_patching_results.json",
+        default="component_localization/path_patching_results.json",
     )
     parser.add_argument(
         "--skip-exp3", action="store_true",

@@ -200,13 +200,13 @@ def main() -> None:
 	parser.add_argument(
 		"--save-results-npz",
 		type=str,
-		default="spatial_computation_neurons/patching_results.npz",
+		default="component_localization/patching_results.npz",
 		help="Path to save reusable patching metrics for plotting",
 	)
 	parser.add_argument(
 		"--save-results-meta",
 		type=str,
-		default="spatial_computation_neurons/patching_results_meta.json",
+		default="component_localization/patching_results_meta.json",
 		help="Path to save summary metadata",
 	)
 	args = parser.parse_args()

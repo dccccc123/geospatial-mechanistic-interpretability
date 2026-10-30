@@ -368,7 +368,9 @@ class GeoCorpusBuilder:
             print(f"[DataBuilder] packed {len(chunks)} token blocks (block size={self.cfg.max_length})")
 
             if save_as_parquet and HF_AVAILABLE:
-                parquet_out = out.parent / "packed_hf_dataset.parquet"
+                parquet_dir = out.parent / "my_parquet_data"
+                parquet_dir.mkdir(parents=True, exist_ok=True)
+                parquet_out = parquet_dir / "packed_hf_dataset.parquet"
                 ds = HFDataset.from_dict({"input_ids": chunks})
                 ds.to_parquet(str(parquet_out))
                 print(f"[DataBuilder] Parquet Dataset saved to: {parquet_out}")

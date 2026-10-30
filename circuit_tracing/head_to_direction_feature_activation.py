@@ -361,7 +361,8 @@ def run_experiment(args) -> Dict:
             "- activation_clean(f(d_pred))"
         ),
         "prediction_rule": (
-            "d_pred is the max logit among East, West, South, North in clean forward"
+            "axis-based rule: pick the axis (E-W or N-S) with larger |logit diff|, "
+            "then the direction with the positive diff"
         ),
         "control_summary": {
             "median_delta_activation": float(np.median(control_flat)),

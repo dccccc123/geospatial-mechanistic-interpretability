@@ -121,19 +121,19 @@ def main() -> None:
     parser.add_argument(
         "--results-npz",
         type=str,
-        default="spatial_computation_neurons/patching_results.npz",
+        default="component_localization/patching_results.npz",
         help="Path to saved patching npz file",
     )
     parser.add_argument(
         "--meta-json",
         type=str,
-        default="spatial_computation_neurons/patching_results_meta.json",
+        default="component_localization/patching_results_meta.json",
         help="Optional metadata json path",
     )
     parser.add_argument(
         "--save-dir",
         type=str,
-        default="spatial_computation_neurons",
+        default="component_localization",
         help="Directory to save figures",
     )
     args = parser.parse_args()

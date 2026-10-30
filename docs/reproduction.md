@@ -51,12 +51,14 @@ Outputs: the ablation effects (Table V) and the upstream mediation fraction (60%
 ## Stage 4 — Circuit attribution
 
 ```bash
-python circuit_tracing/head_to_direction_feature_activation.py  # head -> direction-feature activation change
-python circuit_tracing/circuit.py                                # circuit edge weights
-python circuit_tracing/circuit_grid.py                           # per-prompt circuit
+python circuit_tracing/verify_head24_attention.py             # Head 24 attention summaries (cached JSON)
+python circuit_tracing/trace_city_a_path.py                   # Head 25 attention summaries (cached JSON)
+python circuit_tracing/head_to_direction_feature_activation.py  # head -> direction-feature activation change (Sec. 4.4)
+python circuit_tracing/circuit_grid.py                          # Fig. 5 circuit map (per-prompt edge weights)
+python circuit_tracing/circuit.py                               # four-direction overview diagrams (supplementary)
 ```
 
-Outputs: the circuit map (Fig. 5).
+Outputs: the Fig. 5 circuit map (`circuit_tracing/figures/circuit_south.pdf`) and per-prompt edge weights (`circuit_tracing/results/circuit_perprompt.json`). The overview script `circuit.py` reads the cached attention summaries produced by the first two scripts above (`head24_attention.json`, `city_a_attn_path.json`).
 
 ## Supplementary analyses
 

@@ -243,7 +243,7 @@ def run_experiment(args) -> Dict:
         "control_heads": control_heads,
         "n_prompts": len(rows),
         "metric": "delta_logit = logit_after(d_pred) - logit_before(d_pred)",
-        "prediction_rule": "d_pred is the max logit among East, West, South, North in clean forward",
+        "prediction_rule": "axis-based rule: pick the axis (E-W or N-S) with larger |logit diff|, then the direction with the positive diff",
         "control_summary": {
             "median_delta": float(np.median(control_flat)),
             "mean_delta": float(np.mean(control_flat)),

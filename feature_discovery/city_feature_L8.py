@@ -56,6 +56,7 @@ NAME_CACHE_PATH = ACT_CACHE_DIR / "city_names.npy"
 MODEL_NAME = "Qwen/Qwen3-8B"
 TARGET_LAYER = 8
 OUTLIER_DIMS = [2276, 233]
+RANDOM_SEED = 42  # fixed permutation-test seed for reproducibility
 PROMPT_TEMPLATES = [
     "{city} is a city in China",
     "{city} is located in China",
@@ -636,6 +637,7 @@ def main() -> None:
     nontrivial_ids = filter_nontrivial_features(city_sae_acts)
 
     w = build_spatial_weights(city_coords, k=8)
+    np.random.seed(RANDOM_SEED)  # fixed seed: 999-permutation test reproducible
     global_results = compute_global_morans_i(city_sae_acts, nontrivial_ids, w)
 
     # Multiple-testing correction: Benjamini-Hochberg FDR over the tested nontrivial features
