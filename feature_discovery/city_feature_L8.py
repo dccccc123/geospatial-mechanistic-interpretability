@@ -20,6 +20,9 @@ os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
 
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
+from matplotlib.ticker import FuncFormatter
+from matplotlib import font_manager as fm
+from mpl_toolkits.axes_grid1.anchored_artists import AnchoredSizeBar
 from adjustText import adjust_text
 import numpy as np
 import pandas as pd
@@ -553,6 +556,33 @@ def visualize_top_features(
         ax.set_ylabel("Latitude", fontsize=10)
         ax.set_xlim(72, 136)
         ax.set_ylim(17, 54)
+
+        # ── geographic context: lon/lat tick units, scale bar, north arrow ──
+        ax.xaxis.set_major_formatter(FuncFormatter(lambda v, _: f"{v:.0f}°E"))
+        ax.yaxis.set_major_formatter(FuncFormatter(lambda v, _: f"{v:.0f}°N"))
+
+        # Scale bar (horizontal, 500 km at ~30°N where 1° lon ≈ 96.4 km)
+        scale_km = 500.0
+        mid_lat = 30.0
+        km_per_deg_lon = 111.32 * np.cos(np.radians(mid_lat))
+        scale_deg = scale_km / km_per_deg_lon
+        scalebar = AnchoredSizeBar(
+            ax.transData, scale_deg, f"{scale_km:.0f} km",
+            loc="lower right", pad=0.6, borderpad=0.6, sep=5,
+            frameon=False, size_vertical=0.25,
+            fontproperties=fm.FontProperties(size=9),
+        )
+        ax.add_artist(scalebar)
+
+        # North arrow
+        ax.annotate(
+            "N", xy=(0.935, 0.90), xytext=(0.935, 0.80),
+            xycoords="axes fraction", textcoords="axes fraction",
+            ha="center", va="bottom",
+            arrowprops=dict(arrowstyle="-|>", color="black", lw=1.6),
+            fontsize=12, fontweight="bold",
+            zorder=6,
+        )
 
         # ── Colorbar ──────────────────────────────────────────
         cbar = plt.colorbar(sc, ax=ax, fraction=0.03, pad=0.02)
