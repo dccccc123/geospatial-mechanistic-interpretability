@@ -3,6 +3,9 @@ from pathlib import Path
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from matplotlib.ticker import FuncFormatter
+from matplotlib import font_manager as fm
+from mpl_toolkits.axes_grid1.anchored_artists import AnchoredSizeBar
 import matplotlib.patheffects as pe
 import geopandas as gpd
 from esda.moran import Moran_Local
@@ -71,7 +74,34 @@ for fid, slug in show:
              for i in hot]
     adjust_text(texts, ax=ax, expand=(1.15, 1.4), force_text=(0.4, 0.6),
                 arrowprops=dict(arrowstyle="-", color="#9a8f80", lw=0.5))
-    ax.set_xticks([]); ax.set_yticks([])
+    # ── geographic context: lon/lat tick units, scale bar, north arrow ──
+    ax.xaxis.set_major_formatter(FuncFormatter(lambda v, _: f"{v:.0f}°E"))
+    ax.yaxis.set_major_formatter(FuncFormatter(lambda v, _: f"{v:.0f}°N"))
+    ax.tick_params(labelsize=7, colors="#6B6055")
+
+    # Scale bar (pick a "nice" km length near ~20% of the panel width)
+    km_per_deg_lon = 111.32 * np.cos(np.radians(cy))
+    target_km = (2 * half_lon) * 0.2 * km_per_deg_lon
+    nice_steps = [10, 20, 50, 100, 200, 500, 1000]
+    scale_km = min(nice_steps, key=lambda s: abs(s - target_km))
+    scale_deg = scale_km / km_per_deg_lon
+    scalebar = AnchoredSizeBar(
+        ax.transData, scale_deg, f"{scale_km:.0f} km",
+        loc="lower right", pad=0.3, borderpad=0.4, sep=4,
+        frameon=False, size_vertical=0.15,
+        fontproperties=fm.FontProperties(size=7),
+    )
+    ax.add_artist(scalebar)
+
+    # North arrow
+    ax.annotate(
+        "N", xy=(0.93, 0.90), xytext=(0.93, 0.79),
+        xycoords="axes fraction", textcoords="axes fraction",
+        ha="center", va="bottom",
+        arrowprops=dict(arrowstyle="-|>", color="#2D1B0E", lw=1.3),
+        fontsize=9, fontweight="bold", zorder=6,
+    )
+
     for sp in ax.spines.values():
         sp.set_color("#C4BCB0")
     plt.subplots_adjust(left=0.006, right=0.994, top=0.994, bottom=0.006)
